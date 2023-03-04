@@ -1,0 +1,42 @@
+$maxWidth: 1920; // максимальная ширина страницы
+$minWidth: 320; // минимальная ширина телефона
+$maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1160; // ширина контейнера из макета
+
+$mainOffset: 15; // отступы безопасности для контейнера
+$mainFont: ''; // !указать здесь основное семейство шрифта
+$mainWeight: 400; // !указать здесь основное начертание шрифта
+
+$headerHeight: 100;
+$footerHeight: 100;
+
+$mainRadius: rem(10);
+
+// $redColor: #ff4040;
+
+
+
+
+
+$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$fontSize: rem(16); // Размер шрифта по умолчанию
+$fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+
+$standartTrans: all 280ms ease-in-out 0ms;
+
+
+
+$bigBoxShadow: 0px 8px 42px 0px rgba(54, 54, 54, 0.12);
+$smallBoxShadow: 0px 4px 18px 0px rgba(54, 54, 54, 0.1);
+
+// colors
+
+$darkGreen: #1C231C;
+$white: #fff;
+$titels: #202020;
+$otherBackground: #F4F7F7;
+$typographyTitle: #202020;
+$hoverGreen: #28be46;
+$linkActive: #1DAA39;
+$linkHover: #28BE46;
+$linkPress: #2F9B14;
