@@ -9,23 +9,44 @@
 <div class="wrapper">
 
   <!-- Header -->
-@@include('html/header.html', {})
+<!-- @@include('html/header.html', {}) -->
 <!-- @@include('html/header-business.html', {}) -->
-<!-- @@include('html/header-candidates.html', {}) -->
+@@include('html/header-candidates.html', {})
 <!-- @@include('html/header-guest-white.html', {}) -->
 
-<a href="page.html">page</a>
 
 
 
 
 <main class="main">
+
+<section class="vacancies">
 <div class="container">
+  <div class="vacancies__inner">
 
+    <div class="vacancies__header">
+      <h1 class="vacancies__title">My vacancies</h1>
+      <div class="vacancies__tabs">
+        <button class="vacancies__tabs-btn vacancies__tabs-btn--active vacancies__tabs-btn-invitations">Invitations</button>
+        <button class="vacancies__tabs-btn vacancies__tabs-btn-active">Active</button>
+        <button class="vacancies__tabs-btn vacancies__tabs-btn-archive">Archive</button>
+      </div>
+    </div>
 
+    <div class="vacancies__content">
+      <div class="vacancies__content-tab vacancies__content-tab">
+        <div class="vacancies__content-info-box">
+          <img src="images/content/vacancies/vacancies-info-box.png" alt="vacancies">
+          <p>Here you will be able to view your invitations to vacancies</p>
+        </div>
+      </div>
+      <div class="vacancies__content-tab"></div>
+      <div class="vacancies__content-tab"></div>
+    </div>
 
+  </div>
 </div>
-
+</section>
 
 
 

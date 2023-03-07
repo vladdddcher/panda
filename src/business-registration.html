@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+<!-- @@include('html/header.html', {}) -->
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+@@include('html/header-guest-white.html', {})
+
+
+
+<main class="main">
+
+  <div class="container">
+<section class="registration">
+  <div class="registration__inner">
+    <div class="registration__links">
+      <a class="registration__link" href="#">Find a job</a>
+      <a class="registration__link registration__link--active" href="#">Find personnel</a>
+    </div>
+    <div class="registration__box">
+      <h1 class="registration__title">Business registration</h1>
+      <p class="registration__subtitle">
+        After registration you can find personnel for your business, as well as test, video interview and shortlist candidates based on machine learning algorithms.
+      </p>
+    </div>
+      <form class="form-enter">
+
+        <div class="form-enter__box">
+          <p class="form-enter__text">Add your mobile number</p>
+          <div class="form-enter__wrapper form-enter__wrapper-phone">
+            <input class="form-enter__input input-phone" type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _" value="" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-enter__box">
+          <p class="form-enter__text">Verification code</p>
+          <div class="form-enter__wrapper">
+            <!-- класс для ошибки в инпутах form-enter__input--err -->
+            <input class="form-enter__input form-enter__input-verification" type="text" required>
+            <div class="form-enter__input-box">
+              <p class="form-enter__input-send">Send code</p> <!-- form-enter__input-send--active -->
+              <p class="form-enter__input-timer input-hide">
+                Resend code in <span>34s</span>
+              </p>
+              <img class="form-enter__input-check input-hide" src="images/icons/check.svg" alt="check" required>
+            </div>
+          </div>
+        </div>
+
+
+        <button class="form-enter__btn" type="submit">Continue</button>
+      </form>
+
+
+
+      <div class="registration__text">
+        <p>Already have an account?</p>
+        <a href="#">Sign in</a>
+      </div>
+
+  </div>
+</section>
+</div>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>
