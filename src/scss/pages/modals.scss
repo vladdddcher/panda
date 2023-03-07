@@ -1,0 +1,79 @@
+
+.modal__persona {
+    display: flex;
+    display: none;
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000d7;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+}
+
+.modal__persona-content {
+    background-color: $white;
+    border-radius: 16px;
+    padding: 16px;
+    max-width: 505px;
+    width: 100%;
+}
+
+.modal__close {
+    width: 24px;
+    height: 24px;
+    background-image: url('../../images/icons/close-icon.svg');
+    text-align: right;
+    display: inline-block;
+}
+
+.modal__persona-text {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+
+.modal__persona-links {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        padding: 12px 60px;
+        display: block;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+}
+
+.modal__persona-singin {
+    border: 1px solid $linkActive;
+    margin-right: 16px;
+    &:hover {
+        background-color: $linkActive;
+        color: $white;
+    }
+}
+
+.modal__persona-register {
+    background-color: $linkActive;
+    border: 1px solid $linkActive;
+    color: $white;
+    &:hover {
+        background-color: $white;
+        color: $titels;
+    }
+}

@@ -6,6 +6,12 @@
 @import 'layout/header';
 @import 'layout/footer';
 
+// pages
+
+@import 'pages/modals';
+@import 'pages/cards';
+@import 'pages/persona';
+
 
 .telegram {
     width: 33px;
@@ -19,253 +25,117 @@
     background-image: url('../images/icons/whatsapp-icon.svg');
 }
 
-.cards {
-    padding: 30px 0;
-}
-
-.cards__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    column-gap: 19px;
-    row-gap: 19px;
-}
-
-.cards__buttons {
-    text-align: right;
-    margin-bottom: 25px;
-}
-
-.cards__button {
+.text-gray {
+    font-size: 12px;
     color: #666666;
-    transition: linear .2s;
-    &:last-child {
-        margin-left: 20px;
-    }
-    &:hover {
-        color: #444;
-    }
 }
 
-.cards__button--active {
-    color: $linkActive;
-}
-
-.cards__content-line {
-    display: block;
-    .card {
-        padding: 16px 24px;
-        border: none;
-        display: flex;
-        align-items: center;
-        background-color: $white;
-        &:nth-child(odd) {
-            background-color: #F4F7F7;
-        }
-        &:hover {
-            border: none;
-        }
-        &__video-link {
-            min-width: 95px;
-            max-width: 95px;
-            height: 72px;
-            padding: 0;
-            margin: 0;
-            margin-right: 24px;
-            display: inline-block;
-            &::after {
-                opacity: 1;
-                width: 24px;
-                height: 24px;
-            }
-            img {
-                position: static;
-            }
-        }
-        &__inner {
-            width: 100%;
-            background-color: transparent;
-        }
-        &__wrapper {
-            max-width: 150px;
-            width: 100%;
-            overflow: hidden;
-        }
-        &__box {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-        &__avatar {
-            display: none;
-        }
-        &__wrapper-line {
-            display: block;
-        }
-        &__text-line {
-            display: block;
-            margin-bottom: 10px;
-        }
-    }
-}
-
-.card {
-    border: 1px solid transparent;
-    display: grid;
-    transition: linear .2s;
-    &:hover {
-        border: 1px solid $hoverGreen;
-    }
-    &__inner {
-        background-color: $white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-    }
-    &__video-link {
-        position: relative;
-        padding: 0px 0px 84% 0px;
-        margin: 0 0 0px 0;
-        &::after {
-            position: absolute;
-            content: '';
-            width: 48px;
-            height: 48px;
-            background-image: url('../images/icons/button-player.svg');
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 3;
-            opacity: 0;
-            transition: linear .2s;
-        }
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
-        img {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-            background-repeat: no-repeat;
-            z-index: 1;
-        }
-    }
-    &__wrapper-line {
-        display: none;
-    }
-    &__text-line {
-        display: none;
-    }
-    &__name {
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 5px;
-        display: block;
-
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        max-width: 250px;
-        overflow: hidden;
-    }
-    &__text-gray {
-        font-size: 12px;
-        color: #666666;
-    }
-    &__visited {
-        position: relative;
-        padding-left: 15px;
-        margin-bottom: 10px;
-        &::after {
-            position: absolute;
-            content: '';
-            width: 6px;
-            height: 6px;
-            background-color: #666666;
-            border-radius: 50%;
-            left: 5px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-    &__visited--online {
-        p {
-            display: none;
-        }
-        span {
-            color: $linkActive;
-            display: block;
-        }
-        &::after {
-            background-color: $linkPress;
-        }
-    }
-    &__text-line {
-        margin-bottom: 5px;
-        // display: none;
-    }
-    &__text {
-        position: relative;
-        padding-left: 20px;
-        font-size: 12px;
-        &::after {
-            position: absolute;
-            content: '';
-            width: 16px;
-            height: 16px;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-    &__location {
-        margin-bottom: 5px;
-        &::after {
-            background-image: url('../images/icons/card-map-icon.svg');
-        }
-    }
-    &__price {
-        &::after {
-            background-image: url('../images/icons/card-price-icon.svg');
-        }
-    }
-    &__job {
-        &::after {
-            background-image: url('../images/icons/card-job.svg');
-        }
-    }
-    &__avatar {
-        width: 50px;
-        height: 50px;
-        border: 1px solid transparent;
+.visited {
+    padding-left: 15px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: 6px;
+        background-color: #666666;
         border-radius: 50%;
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-        &:hover {
-            padding: 1px;
-            border: 1px solid $linkHover;
-        }
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
+.back {
+    padding-left: 32px;
+    position: relative;
+    display: block;
+    font-weight: 600;
+    color: $linkActive;
+    margin-bottom: 24px;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../images/icons/arrow-back.svg');
+    }
+}
 
+.add-favorite {
+    background-image: url('../images/icons/add-favorite.svg');
+    height: 26px;
+    width: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    font-size: 0;
+    color: transparent;
+}
 
+.add-favorite--active {
+    background-image: url('../images/icons/add-favorite-active.svg');
+}
 
+.info-block-icon {
+    padding-left: 24px;
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 5px;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
 
+.info-location {
+    &::after {
+        background-image: url('../images/icons/card-map-icon.svg');
+    }
+}
+.info-price {
+    &::after {
+        background-image: url('../images/icons/card-price-icon.svg');
+    }
+}
+.info-job {
+    &::after {
+        background-image: url('../images/icons/card-job.svg');
+    }
+}
 
-
+.invite-btn {
+    padding: 12px 16px 12px 48px;
+    background-color: $linkActive;
+    font-weight: 600;
+    color: $white;
+    border-radius: 8px;
+    position: relative;
+    max-width: 145px;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 24px;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../images/icons/invite-icon.svg');
+        background-repeat: no-repeat;
+    }
+    &:hover {
+        background-color: $linkHover;
+    }
+}
 
 
 .footer__help {

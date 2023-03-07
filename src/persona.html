@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+<!-- @@include('html/header.html', {}) -->
+@@include('html/header-business.html', {})
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+
+
+<main class="main">
+
+<section class="persona">
+<div class="container">
+  <a class="back" href="#">Back</a>
+  <h1 class="persona__title">Ralph Edwards</h1>
+  <div class="persona__inner">
+    <div class="persona__left">
+
+      <div class="persona__left-box persona__left-name">
+        <div class="persona__left-name-info">
+            <img src="images/content/card/card-photo-1.jpg" alt="Avatar">
+          <div class="box">
+            <h3 class="persona__left-title">Ralph Edwards</h3>
+            <p class="visited text-gray">Last seen today</p>
+          </div>
+        </div>
+        <button class="add-favorite">add to favorite</button><!-- add-favorite--active -->
+
+      </div>
+
+      <div class="persona__left-box">
+        <p class="persona__left-text">Contact Details</p>
+        <a class="persona__mail" href="#">ralfnames@example.com</a>
+        <a class="persona__phone" href="#">+7 (270) 333 - 22 - 11</a>
+      </div>
+
+      <div class="persona__left-box">
+        <p class="persona__left-text">Video resume</p>
+        <a class="persona__left-video" href="#">
+          <img src="images/content/card/card-photo-1.jpg" alt="Video">
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="persona__right">
+      <div class="persona__right-box">
+        <div class="persona__right-wrapper">
+          <h2 class="persona__profession">IOS Developer</h2>
+          <button class="invite-btn">Send invite</button>
+        </div>
+        <div class="persona__right-content">
+          <p class="info-block-icon info-price">USD 4,500/month</p>
+          <p class="info-block-icon info-location">United Arab Emirates</p>
+        </div>
+        <ul class="persona__right-skills">
+          <li>Can work remotely</li>
+          <li>Willing to relocate</li>
+          <li>Ready to go on business trips</li>
+        </ul>
+      </div>
+      <div class="persona__right-box">
+        <h4 class="persona__right-title">Personal details</h4>
+        <div class="persona__right-details">
+          <div class="persona__right-details-box">
+            <span>First name</span>
+            <p>Ralph</p>
+          </div>
+          <div class="persona__right-details-box">
+            <span>Last name</span>
+            <p>Edwards</p>
+          </div>
+          <div class="persona__right-details-box">
+            <span>Age</span>
+            <p>34</p>
+          </div>
+          <div class="persona__right-details-box">
+            <span>Nationality</span>
+            <p>Philippine</p>
+          </div>
+          <div class="persona__right-details-box">
+            <span>Gender</span>
+            <p>Male</p>
+          </div>
+        </div>
+      </div>
+      <div class="persona__right-box">
+        <h4 class="persona__right-title">About</h4>
+        <div class="persona__right-about">
+          <p class="persona__right-about-text">Hardworking College Student seeking employment. Bringing forth a motivated attitude and a variety of powerful skills. Adept in various social media platforms and office technology programs. Committed to utilizing my skills to further the mission of a company.</p>
+          <p class="persona__right-about-text persona__right-about-text--hide">Скрытый текст который открывается при нажатии на кнопку! Скрытый текст который открывается при нажатии на кнопку! Скрытый текст который открывается при нажатии на кнопку! Скрытый текст который открывается при нажатии на кнопку!</p>
+          <button class="persona__right-about-btn">Show more</button>
+        </div>
+      </div>
+      <div class="persona__right-box">
+        <h4 class="persona__right-title">Education</h4>
+        <div class="persona__right-education">
+          <div class="persona__right-education-box">
+            <p>Bachelor, University of Nebraska, Lincoln</p>
+            <div class="persona__right-date">
+              <span>2001</span> - <span>2005</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="persona__right-box">
+        <h4 class="persona__right-title">Work experience</h4>
+
+        <div class="persona__right-experience">
+          <h5 class="persona__right-experience-title">IOS Developer at Amazon Ltd.</h5>
+          <div class="persona__right-date">
+            <span>25.11.2021</span> - <span>Till present</span>
+          </div>
+          <div class="persona__right-experience-text">Responsibilities:</div>
+          <ul>
+            <li>Designing and building mobile applications for Apple’s iOS platform.</li>
+            <li>Collaborating with the design team to define app features.</li>
+            <li>Ensuring quality and performance of the application to specifications.</li>
+            <li>Identifying potential problems and resolving application bottlenecks.</li>
+            <li>Fixing application bugs before the final release.</li>
+          </ul>
+        </div>
+
+        <div class="persona__right-experience">
+          <h5 class="persona__right-experience-title">IOS Developer at Amazon Ltd.</h5>
+          <div class="persona__right-date">
+            <span>25.11.2021</span> - <span>Till present</span>
+          </div>
+          <div class="persona__right-experience-text">Responsibilities:</div>
+          <ul>
+            <li>Designing and building mobile applications for Apple’s iOS platform.</li>
+            <li>Collaborating with the design team to define app features.</li>
+            <li>Ensuring quality and performance of the application to specifications.</li>
+            <li>Identifying potential problems and resolving application bottlenecks.</li>
+            <li>Fixing application bugs before the final release.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+    <div class="modal__persona">
+      <div class="modal__persona-content">
+        <button class="modal__close"></button>
+        <img src="images/icons/modal-icon.png" alt="">
+        <div class="modal__persona-text modal__persona-invite">
+          To send an invite, please register or sign in
+        </div>
+        <div class="modal__persona-links">
+          <a class="modal__persona-singin" href="#">Sign in</a>
+          <a class="modal__persona-register" href="#">Register</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>
+
+
+
+<!-- <input aria-invalid="false" autocomplete="new-password" name="code" type="number" class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd css-1k3us2r" value="" aria-describedby="mui-122-helper-text" id="mui-122" style="min-height: auto;"> -->

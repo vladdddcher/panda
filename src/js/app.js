@@ -71,21 +71,62 @@ isWebp()
 // togglePopupWindows()
 // ====================================================================================================================================================
 
+try {
+  const btnMore = document.querySelector('.header__more-btn');
+  const contentMore = document.querySelector('.header__menu');
+
+  btnMore.addEventListener('click', () => {
+    if (contentMore.classList.contains('header__menu--active')) {
+      contentMore.classList.remove('header__menu--active');
+      btnMore.classList.remove('header__more-btn--active');
+      contentMore.style.zIndex = '-1'
+    } else {
+      contentMore.classList.toggle('header__menu--active');
+      btnMore.classList.toggle('header__more-btn--active');
+      setTimeout( () => {
+        contentMore.style.zIndex = '10'
+      }, 300)
+    }
+  });
+} catch(e){}
 
 
-const btnMore = document.querySelector('.header__more-btn');
-const contentMore = document.querySelector('.header__menu');
 
-btnMore.addEventListener('click', () => {
-  if (contentMore.classList.contains('header__menu--active')) {
-    contentMore.classList.remove('header__menu--active');
-    btnMore.classList.remove('header__more-btn--active');
-    contentMore.style.zIndex = '-1'
-  } else {
-    contentMore.classList.toggle('header__menu--active');
-    btnMore.classList.toggle('header__more-btn--active');
-    setTimeout( () => {
-      contentMore.style.zIndex = '10'
-    }, 300)
-  }
-})
+
+// card
+
+try {
+  function cardsBtns () {
+
+    const btnGrid = document.querySelector('.cards__button-grid');
+    const btnLine = document.querySelector('.cards__button-line');
+    const cardContent = document.querySelector('.cards__content');
+
+      btnGrid.addEventListener('click', () => {
+        cardContent.style.opacity = '0';
+        cardContent.classList.remove('cards__content-line');
+        btnLine.classList.remove('cards__button--active');
+        btnGrid.classList.add('cards__button--active');
+
+        setTimeout( () => {
+          cardContent.style.opacity = '1';
+        }, 200);
+      });
+
+      btnLine.addEventListener('click', () => {
+        cardContent.style.opacity = '0';
+        cardContent.classList.add('cards__content-line');
+        btnLine.classList.add('cards__button--active');
+        btnGrid.classList.remove('cards__button--active');
+
+        setTimeout( () => {
+          cardContent.style.opacity = '1';
+        }, 200);
+      });
+    }
+
+    cardsBtns();
+} catch(e){}
+
+
+console.log(window.innerWidth)
