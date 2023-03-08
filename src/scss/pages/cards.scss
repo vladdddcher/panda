@@ -189,6 +189,95 @@
 }
 
 
+.card__invitations {
+    border-radius: 8px;
+    border: 1px solid $linkActive;
+    padding: 24px;
+    margin-bottom: 24px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .company__logo {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border: 1px solid $borderGray;
+        border-radius: 50%;
+        padding: 7px;
+        margin-right: 16px;
+    }
+    .company__speciality {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    &-company-name {
+        display: inline-block;
+        margin-right: 7px;
+    }
+    .info-location {
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .info-price {
+        margin-top: 12px;
+        max-height: max-content;
+        height: 13px;
+        font-weight: 600;
+        span {
+            font-weight: 400;
+            color: #666666;
+        }
+    }
+    &-about {
+        margin-top: 20px;
+    }
+    .info-block-new {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 890px) {
@@ -198,10 +287,45 @@
     .cards__content-line {
         display: none;
     }
+
+    .card__invitations {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 715px) {
+    .card__invitations-info {
+        flex-direction: column;
+    }
+    .card__invitations {
+        .info-price {
+            margin-left: 80px;
+        }
+    }
 }
 
 
-
+@media (max-width: 440px) {
+    .card__invitations {
+        .info-price {
+            margin: 0 auto;
+            margin-top: 8px;
+        }
+        .company__speciality {
+            font-size: 20px;
+        }
+    }
+    .card__invitations-wrapper {
+        flex-direction: column;
+    }
+    .card__invitations-box {
+        text-align: center;
+    }
+    .card__invitations-about {
+        margin-top: 14px;
+        text-align: center;
+    }
+}
 
 
 

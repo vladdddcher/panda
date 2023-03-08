@@ -16,11 +16,11 @@
         overflow: hidden;
     }
     &__inner {
-        border-top: 1px solid #D3D3D3;
+        border-top: 1px solid $borderGray;
         display: flex;
     }
     &__left {
-        border-right: 1px solid #D3D3D3;
+        border-right: 1px solid $borderGray;
         min-width: 432px;
         max-width: 432px;
         padding-right: 48px;
@@ -32,8 +32,8 @@
     }
     &__left-box {
         padding: 32px 0;
-        border-top: 1px solid #D3D3D3;
-        border-bottom: 1px solid #D3D3D3;
+        border-top: 1px solid $borderGray;
+        border-bottom: 1px solid $borderGray;
         &:last-child,
         &:first-child {
             border-top: none;
@@ -129,8 +129,8 @@
     }
     &__right-box {
         padding: 32px 0;
-        border-top: 1px solid #D3D3D3;
-        border-bottom: 1px solid #D3D3D3;
+        border-top: 1px solid $borderGray;
+        border-bottom: 1px solid $borderGray;
         &:last-child,
         &:first-child {
             border-top: none;
@@ -298,7 +298,7 @@
         padding: 20px 0;
     }
     .persona__right {
-        border-top: 1px solid #D3D3D3;
+        border-top: 1px solid $borderGray;
     }
 }
 
@@ -322,7 +322,7 @@
     .persona__right-details-box {
         margin-bottom: 10px;
         padding-bottom: 10px;
-        border-bottom: 1px solid #D3D3D3;
+        border-bottom: 1px solid $borderGray;
         max-width: 300px;
         &:last-child {
             margin-bottom: 0;

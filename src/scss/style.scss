@@ -83,7 +83,7 @@
 }
 
 .info-block-icon {
-    padding-left: 24px;
+    padding-left: 18px;
     position: relative;
     font-size: 14px;
     margin-bottom: 5px;
@@ -139,16 +139,225 @@
     }
 }
 
+.company__name {
+    font-weight: 500;
+}
+
+.company__speciality {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 290px;
+    padding: 2px 0;
+    overflow: hidden;
+}
+.company__about {
+    line-height: 24px;
+    color: #666;
+}
+
+.info-block-new {
+    display: inline-block;
+    padding: 6px 32px;
+    color: $linkActive;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #D2EED7;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
 
 .footer__help {
     font-weight: 600;
     font-size: 17px;
 }
 
+.card__tag {
+    width: 100px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+}
+
+.closed {
+    background-color: #E5F0FF;
+    color: #0066FF;
+}
+.declined {
+    background-color: #FFEBEC;
+    color: #F91F43;
+}
+.rejected {
+    background-color: #F7E3FF;
+    color: #8C3EF0;
+}
 
 
+.card__vacancy {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 268px 268px 133px 137px 136px 37px;
+    align-items: center;
+    padding: 24px;
+    white-space: nowrap;
+    border-radius: 8px;
+    &:nth-child(odd) {
+        background-color: #F4F7F7;
+    }
+    &:first-child {
+        background-color: #D2EED7;
+    }
+    &-item {
+        font-weight: 500;
+        color: #3E3E3E;
+        position: relative;
+    }
+    &-item-name {
+        display: flex;
+        align-items: center;
+    }
+    &-item-title {
+        cursor: pointer;
+        position: relative;
+        color: #666;
+        font-size: 14px;
+        max-width: max-content;
+        padding-right: 24px;
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: url('../images/icons/vacancies-arrow.svg');
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &-item-title-chat {
+        &::after {
+            display: none;
+        }
+    }
+    &-item-title--active {
+        color: $linkActive;
+        &::after {
+            background-image: url('../images/icons/vacancies-arrow-active.svg');
 
+        }
+    }
+    .company__logo {
+        display: inline-block;
+        padding: 14px;
+        margin-right: 16px;
+        border-radius: 50%;
+        background-color: $white;
+    }
+    &-item-record {
+        font-weight: 600;
+        color: $linkActive;
+        padding-left: 40px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 32px;
+            height: 32px;
+            background-image: url('../images/icons/record-icon.svg');
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+        }
+    }
+    &-item-video {
+        width: 105px;
+        height: 80px;
+        img {
+            max-width: 105px;
+            width: 100%;
+            max-height: 80px;
+            height: 100%;
+            background-size: cover;
+        }
+    }
+    &-item-tests {
+        text-align: center;
+        display: block;
+    }
+    &-item-chat {
+        width: 32px;
+        height: 32px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 32px;
+            height: 32px;
+            top: -10px;
+            left: 0;
+            background-image: url('../images/icons/message-icon.svg');
+        }
+        &::before {
+            position: absolute;
+            content: 'Active chat';
+            background-color: #F4F7F7;
+            padding: 5px 10px;
+            top: 21px;
+            right: -30px;
+            border-radius: 4px;
+            opacity: 0;
+            transition: linear .2s;
+            pointer-events: none;
+            box-shadow: $smallBoxShadow;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+    &-item-date {
+        display: block;
+        text-align: center;
+    }
+    &-item-chat--avaliable {
+        &::after {
+            background-image: url('../images/icons/message-avaliable-icon.svg');
+        }
+        &::before {
+            content: 'Chat not avaliable';
+            opacity: 0;
+            transition: linear .2s;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+.card__vacancy-title {
+    background-color: #D2EED7;
+    padding: 16px 24px;
+    border-radius: 8px;
+}
 
+.vacancies__tab-content-active {
+    display: none
+}
+
+.vacancies__tab-content-archive {
+    .card__vacancy {
+        grid-template-columns: 268px 268px 127px 133px 133px 105px;
+
+    }
+}
 
 
 

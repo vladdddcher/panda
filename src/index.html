@@ -27,21 +27,321 @@
     <div class="vacancies__header">
       <h1 class="vacancies__title">My vacancies</h1>
       <div class="vacancies__tabs">
-        <button class="vacancies__tabs-btn vacancies__tabs-btn--active vacancies__tabs-btn-invitations">Invitations</button>
-        <button class="vacancies__tabs-btn vacancies__tabs-btn-active">Active</button>
-        <button class="vacancies__tabs-btn vacancies__tabs-btn-archive">Archive</button>
+        <button class="vacancies__tabs-btn vacancies__tabs-btn--active vacancies__tabs-btn-invitations">
+          Invitations
+          <span class="vacancies__tabs-btn-num vacancies__tabs-btn-num--active">2</span>
+        </button>
+        <button class="vacancies__tabs-btn">
+          Active
+          <span class="vacancies__tabs-btn-num">2</span>
+        </button>
+        <button class="vacancies__tabs-btn vacancies__tabs-btn-archive">
+          Archive
+          <span class="vacancies__tabs-btn-num">2</span>
+        </button>
       </div>
     </div>
 
-    <div class="vacancies__content">
-      <div class="vacancies__content-tab vacancies__content-tab">
-        <div class="vacancies__content-info-box">
+    <div class="vacancies__tabs-content">
+
+      <div class="vacancies__tab-content vacancies__tab-content-invitations">
+        <div class="vacancies__tab-content-info-box">
           <img src="images/content/vacancies/vacancies-info-box.png" alt="vacancies">
           <p>Here you will be able to view your invitations to vacancies</p>
         </div>
+
+        <div class="vacancies__info">
+          <div class="vacancies__invite">
+            <span>15</span>
+            <p>invitations</p>
+          </div>
+          <div class="vacancies__sort">
+            <p>Sort by</p>
+            <button class="vacancies__sort-btn">Date invited</button>
+          </div>
+        </div>
+
+        <div class="vacancies__cards">
+
+          <div class="card__invitations">
+            <div class="card__invitations-info">
+              <div class="card__invitations-wrapper">
+                <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+                <div class="card__invitations-box">
+                  <a class="card__invitations-speciality" href="#">
+                    <h2 class="company__speciality">Senior Product Designer</h2>
+                  </a>
+                  <a class="card__invitations-company-name" href="#">
+                    <h3 class="company__name">Sberbank Inc</h3>
+                  </a>
+                  <p class="info-block-icon info-location">United Arab Emirates</p>
+                </div>
+              </div>
+              <p class="info-block-icon info-price">USD 3,500-4,500 <span>per month</span></p>
+            </div>
+            <p class="card__invitations-about company__about">
+              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis Aliqua id fugiat nostrud irure.
+            </p>
+            <div class="info-block-new">New</div>
+          </div>
+
+          <div class="card__invitations">
+            <div class="card__invitations-info">
+              <div class="card__invitations-wrapper">
+                <img  class="company__logo" src="images/content/vacancies/company-logo-2.png" alt="company-logo">
+                <div class="card__invitations-box">
+                  <a class="card__invitations-speciality" href="#">
+                    <h2 class="company__speciality">Senior Product Designer</h2>
+                  </a>
+                  <a class="card__invitations-company-name" href="#">
+                    <h3 class="company__name">Sberbank Inc</h3>
+                  </a>
+                  <p class="info-block-icon info-location">United Arab Emirates</p>
+                </div>
+              </div>
+              <p class="info-block-icon info-price">USD 3,500 <span>per month</span></p>
+            </div>
+            <p class="card__invitations-about company__about">
+              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis Aliqua id fugiat nostrud irure. Aliqua id fugiat nostrud irure ex duis ed et d fugiat nostrud irure ex duis ea quis id quis ad et...
+            </p>
+            <div class="info-block-new">New</div>
+          </div>
+
+          <div class="card__invitations">
+            <div class="card__invitations-info">
+              <div class="card__invitations-wrapper">
+                <img  class="company__logo" src="images/content/vacancies/company-logo-2.png" alt="company-logo">
+                <div class="card__invitations-box">
+                  <a class="card__invitations-speciality" href="#">
+                    <h2 class="company__speciality">Senior Product Designer</h2>
+                  </a>
+                  <a class="card__invitations-company-name" href="#">
+                    <h3 class="company__name">Sberbank Inc</h3>
+                  </a>
+                  <p class="info-block-icon info-location">United Arab Emirates</p>
+                </div>
+              </div>
+              <p class="info-block-icon info-price">USD 3,500 <span>per month</span></p>
+            </div>
+            <p class="card__invitations-about company__about">
+              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis Aliqua id fugiat nostrud irure. Aliqua id fugiat nostrud irure ex duis ed et d fugiat nostrud irure ex duis ea quis id quis ad et.  Aliqua id fugiat nostrud irure ex duis ed et d fugiat nostrud irure ex duis ea quis id quis ad et.
+            </p>
+          </div>
+
+        </div>
+
       </div>
-      <div class="vacancies__content-tab"></div>
-      <div class="vacancies__content-tab"></div>
+
+      <div class="vacancies__tab-content vacancies__tab-content-active">
+
+        <div class="card__vacancy card__vacancy-title">
+          <div class="card__vacancy-item card__vacancy-item-title">Company Name</div>
+          <div class="card__vacancy-item card__vacancy-item-title card__vacancy-item-title--active">Vacancies</div>
+          <div class="card__vacancy-item card__vacancy-item-title">Video interview</div>
+          <div class="card__vacancy-item card__vacancy-item-title">Tests completed</div>
+          <div class="card__vacancy-item card__vacancy-item-title">Closing deadline</div>
+          <div class="card__vacancy-item card__vacancy-item-title card__vacancy-item-title-chat">Chat</div>
+        </div>
+
+        <div class="card__vacancy">
+          <a class="card__vacancy-item card__vacancy-item-name" href="#">
+            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+            <h3 class="company__name">Sberbank Inc</h3>
+          </a>
+          <a class="card__vacancy-item" href="#">
+            <p>Internet Security Assistant</p>
+          </a>
+          <div class="card__vacancy-item">
+           <a class="card__vacancy-item-record" href="#">Record</a>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-tests">0/8</span>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-deadline">1 day left</span>
+          </div>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-chat" href="#"></a>
+          </div>
+        </div>
+
+        <div class="card__vacancy">
+          <a class="card__vacancy-item card__vacancy-item-name" href="#">
+            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+            <h3 class="company__name">Sberbank Inc</h3>
+          </a>
+          <a class="card__vacancy-item" href="#">
+            <p>Internet Security Assistant</p>
+          </a>
+          <div class="card__vacancy-item">
+           <a class="card__vacancy-item-record" href="#">Record</a>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-tests">0/8</span>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-deadline">1 day left</span>
+          </div>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-chat" href="#"></a>
+          </div>
+        </div>
+
+        <div class="card__vacancy">
+          <a class="card__vacancy-item card__vacancy-item-name" href="#">
+            <img  class="company__logo" src="images/content/vacancies/company-logo-2.png" alt="company-logo">
+            <h3 class="company__name">Sberbank Inc</h3>
+          </a>
+          <a class="card__vacancy-item" href="#">
+            <p>Internet Security Assistant</p>
+          </a>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-video" href="#">
+              <img src="images/content/card/card-photo-1.jpg" alt="video-jobs">
+            </a>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-tests">0/8</span>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-deadline">1 day left</span>
+          </div>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-chat" href="#"></a>
+          </div>
+        </div>
+
+        <div class="card__vacancy">
+          <a class="card__vacancy-item card__vacancy-item-name" href="#">
+            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+            <h3 class="company__name">Sberbank Inc</h3>
+          </a>
+          <a class="card__vacancy-item" href="#">
+            <p>Internet Security Assistant</p>
+          </a>
+          <div class="card__vacancy-item">
+           <a class="card__vacancy-item-record" href="#">Record</a>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-tests">0/8</span>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-deadline">1 day left</span>
+          </div>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-chat" href="#"></a>
+          </div>
+        </div>
+
+        <div class="card__vacancy">
+          <a class="card__vacancy-item card__vacancy-item-name" href="#">
+            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+            <h3 class="company__name">Sberbank Inc</h3>
+          </a>
+          <a class="card__vacancy-item" href="#">
+            <p>Internet Security Assistant</p>
+          </a>
+          <a class="card__vacancy-item-video" href="#">
+            <img src="images/content/card/card-photo-2.jpg" alt="video-jobs">
+          </a>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-tests">0/8</span>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-deadline">1 day left</span>
+          </div>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-chat card__vacancy-item-chat--avaliable" href="#"></a>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="vacancies__tab-content vacancies__tab-content-archive">
+
+        <div class="card__vacancy card__vacancy-title">
+          <div class="card__vacancy-item card__vacancy-item-title">Company Name</div>
+          <div class="card__vacancy-item card__vacancy-item-title card__vacancy-item-title--active">Vacancies</div>
+          <div class="card__vacancy-item card__vacancy-item-title">Vacancy status</div>
+          <div class="card__vacancy-item card__vacancy-item-title">Video interview</div>
+          <div class="card__vacancy-item card__vacancy-item-title">Tests completed</div>
+          <div class="card__vacancy-item card__vacancy-item-title">Date invited</div>
+        </div>
+
+        <div class="card__vacancy">
+          <a class="card__vacancy-item card__vacancy-item-name" href="#">
+            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+            <h3 class="company__name">Sberbank Inc</h3>
+          </a>
+          <a class="card__vacancy-item" href="#">
+            <p>Internet Security Assistant</p>
+          </a>
+          <div class="card__vacancy-item">
+            <div class="card__vacancy-status">
+              <span class="card__tag closed">Closed</span>
+            </div>
+          </div>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-record" href="#">Record</a>
+           </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-tests">0/8</span>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-date">25.05.2022</span>
+          </div>
+        </div>
+
+        <div class="card__vacancy">
+          <a class="card__vacancy-item card__vacancy-item-name" href="#">
+            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+            <h3 class="company__name">Sberbank Inc</h3>
+          </a>
+          <a class="card__vacancy-item" href="#">
+            <p>Internet Security Assistant</p>
+          </a>
+          <div class="card__vacancy-item">
+            <div class="card__vacancy-status">
+              <span class="card__tag declined">Declined</span>
+            </div>
+          </div>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-record" href="#">Record</a>
+           </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-tests">0/8</span>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-date">25.05.2022</span>
+          </div>
+        </div>
+
+        <div class="card__vacancy">
+          <a class="card__vacancy-item card__vacancy-item-name" href="#">
+            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+            <h3 class="company__name">Sberbank Inc</h3>
+          </a>
+          <a class="card__vacancy-item" href="#">
+            <p>Internet Security Assistant</p>
+          </a>
+          <div class="card__vacancy-item">
+            <div class="card__vacancy-status">
+              <span class="card__tag rejected">Rejected</span>
+            </div>
+          </div>
+          <div class="card__vacancy-item">
+            <a class="card__vacancy-item-record" href="#">Record</a>
+           </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-tests">0/8</span>
+          </div>
+          <div class="card__vacancy-item">
+            <span class="card__vacancy-item-date">25.05.2022</span>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </div>
