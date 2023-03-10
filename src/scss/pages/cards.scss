@@ -97,11 +97,12 @@
 
 .card {
     max-width: 640px;
-    border: 1px solid transparent;
+    border: 1px solid $borderGray;
     display: grid;
     transition: linear .2s;
     &:hover {
         border: 1px solid $hoverGreen;
+        box-shadow: $bigBoxShadow;
     }
     &__inner {
         background-color: $white;
@@ -241,7 +242,7 @@
     &-about {
         margin-top: 20px;
     }
-    .info-block-new {
+    .block-status__new {
         margin-top: 20px;
     }
 }

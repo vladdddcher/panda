@@ -129,4 +129,90 @@ try {
 } catch(e){}
 
 
+// vacansy card=========
 
+try{
+
+
+
+const vacansyCads = () => {
+  const btnInvitations = document.querySelector('.persona-vacancies__tabs-btn-invitations');
+  const btnActive = document.querySelector('.persona-vacancies__tabs-btn-active');
+  const btnArchive = document.querySelector('.persona-vacancies__tabs-btn-archive');
+
+  const contentInvitations = document.querySelector('.persona-vacancies__tab-content-invitations');
+  const contentActive = document.querySelector('.persona-vacancies__tab-content-active');
+  const contentArchive = document.querySelector('.persona-vacancies__tab-content-archive');
+
+  const btnActiveClass = 'persona-vacancies__tabs-btn--active';
+  const contentActiveClass = 'persona-vacancies__tab-content--active';
+
+  btnInvitations.addEventListener('click', () => {
+    btnInvitations.classList.add(btnActiveClass);
+    btnActive.classList.remove(btnActiveClass);
+    btnArchive.classList.remove(btnActiveClass);
+
+    contentInvitations.classList.add(contentActiveClass);
+    contentActive.classList.remove(contentActiveClass);
+    contentArchive.classList.remove(contentActiveClass);
+
+  });
+
+  btnActive.addEventListener('click', () => {
+    btnInvitations.classList.remove(btnActiveClass);
+    btnActive.classList.add(btnActiveClass);
+    btnArchive.classList.remove(btnActiveClass);
+
+    contentInvitations.classList.remove(contentActiveClass);
+    contentActive.classList.add(contentActiveClass);
+    contentArchive.classList.remove(contentActiveClass);
+  });
+
+  btnArchive.addEventListener('click', () => {
+    btnInvitations.classList.remove(btnActiveClass);
+    btnActive.classList.remove(btnActiveClass);
+    btnArchive.classList.add(btnActiveClass);
+
+    contentInvitations.classList.remove(contentActiveClass);
+    contentActive.classList.remove(contentActiveClass);
+    contentArchive.classList.add(contentActiveClass);
+  });
+
+
+
+
+};
+
+vacansyCads();
+
+
+} catch(e){}
+
+
+
+// const circle = document.querySelector('.circle-progress');
+//     const circleRadius = circle.r.baseVal.value;
+//     const circumference = 2 * Math.PI * circleRadius;
+//     const circlePercent = document.querySelector('.circle-percent');
+//     let count = 0;
+
+//     circle.style.strokeDasharray = `${circumference} ${circumference}`;
+//     circle.style.strokeDashoffset = circumference;
+//     console.log(circumference)
+
+//     function setProgress(percent) {
+
+//         const offsetCount = setInterval(() => {
+//             if(circle.style.strokeDashoffset >= circumference) {
+//                 clearInterval(offsetCount);
+//             } circle.style.strokeDashoffset -= 1;
+//               circle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
+
+//             circlePercent.innerHTML = count + '%';
+//             if (count >= percent) {
+//                 clearInterval(offsetCount)
+//             }
+//             count += 1;
+//         }, 100)
+//     };
+//     setProgress(50);

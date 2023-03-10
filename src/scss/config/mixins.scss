@@ -133,3 +133,25 @@
   }
 }
 
+
+
+@mixin cropText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin afterTopAbsolute {
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin disabledBtn {
+  background-color: #F4F7F7;
+  border: 1px solid $borderGray;
+  color: #D3D3D3;
+  cursor: auto;
+}

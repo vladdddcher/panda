@@ -9,341 +9,204 @@
 <div class="wrapper">
 
   <!-- Header -->
-<!-- @@include('html/header.html', {}) -->
+@@include('html/header.html', {})
 <!-- @@include('html/header-business.html', {}) -->
-@@include('html/header-candidates.html', {})
+<!-- @@include('html/header-candidates.html', {}) -->
 <!-- @@include('html/header-guest-white.html', {}) -->
 
 
 
-
+<div class="breadcrumbs">
+<div class="container">
+  <div class="breadcrumbs__inner">
+    <ul>
+      <li>
+        <a href="#">My vacancies</a>
+      </li>
+      <li>
+        <a href="#">Invitations</a>
+      </li>
+      <li class="breadcrumbs__link-active">
+        <a href="#">Ux Architect</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
 
 <main class="main">
 
-<section class="vacancies">
+<section class="candidate-vacancy">
 <div class="container">
-  <div class="vacancies__inner">
-
-    <div class="vacancies__header">
-      <h1 class="vacancies__title">My vacancies</h1>
-      <div class="vacancies__tabs">
-        <button class="vacancies__tabs-btn vacancies__tabs-btn--active vacancies__tabs-btn-invitations">
-          Invitations
-          <span class="vacancies__tabs-btn-num vacancies__tabs-btn-num--active">2</span>
-        </button>
-        <button class="vacancies__tabs-btn">
-          Active
-          <span class="vacancies__tabs-btn-num">2</span>
-        </button>
-        <button class="vacancies__tabs-btn vacancies__tabs-btn-archive">
-          Archive
-          <span class="vacancies__tabs-btn-num">2</span>
-        </button>
+  <div class="block-flex-start">
+    <h1 class="candidate-vacancy__title">Ux Architect</h1>
+    <div class="block-status__new block-status">New</div>
+  </div>
+  <div class="candidate-vacancy__header">
+    <div class="candidate-vacancy__header-box">
+      <a class="candidate-vacancy__header-logo candidate-vacancy__header-item" href="#">
+        <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
+        <h3 class="company__name">CompanyName55wwwwwwwwwwwwwwwwwwwwwwwwwwwww</h3>
+      </a>
+      <p class="info-block-icon info-price candidate-vacancy__header-item">USD 3,500 - 4,500 <span>per month</span></p>
+      <p class="info-block-icon info-location candidate-vacancy__header-item">United Arab Emirateswwwwwwwwwwwwwwwwwwwwww</p>
+    </div>
+    <div class="candidate-vacancy__header-wrapper">
+      <p class="info-block-icon info-remote__work">Remote work</p>
+      <p class="info-block-icon info-deadline">Application deadline<span class="info-deadline-date">24.06.2022</span></p>
+    </div>
+  </div>
+  <div class="candidate-vacancy__inner">
+    <div class="candidate-vacancy__content">
+      <div class="candidate-vacancy__info">
+        <div class="candidate-vacancy__about">
+          <div class="candidate-vacancy__about-box">
+              <h2 class="candidate-vacancy__about-title">About the company</h2>
+              <p class="candidate-vacancy__about-suptitle">Direct employer</p>
+          </div>
+          <div class="candidate-vacancy__about-text">
+            <p>
+              Mi ultrices et proin a ut quis enim pharetra. In aliquam sapien nam ullamcorper sit montes. Dui at dictumst sagittis hac velit enim euismod. In egestas urna risus urna, vitae adipiscing turpis.
+            </p>
+          </div>
+          <button class="show-more-btn">Show more</button>
+          <div class="candidate-vacancy__about-text hide">
+            <p>Mi ultrices et proin a ut quis enim pharetra. In aliquam sapien nam ullamcorper sit montes. Dui at dictumst sagittis hac velit enim euismod. In egestas urna risus urna, vitae adipiscing turpis.</p>
+          </div>
+        </div>
+        <div class="candidate-vacancy__about">
+          <div class="candidate-vacancy__about-box">
+              <h2 class="candidate-vacancy__about-title">Vacancy details</h2>
+          </div>
+          <div class="candidate-vacancy__about-text">
+              <p>Required experience: 3-6 years</p>
+              <p>Part time, remote working</p>
+              <p>Temporary registration is possible: service contract, work and labour contract, contract of a private law character, self-employed, sole proprietors</p>
+              <p> Part-time jobs possible: in 4-6 hour shifts</p>
+              <p>Mi ultrices et proin a ut quis enim pharetra. In aliquam sapien nam ullamcorper sit montes. Dui at dictumst sagittis hac velit enim euismod. In egestas urna risus urna, vitae adipiscing turpis. Molestie vitae cras tellus aliquet faucibus. Egestas ultricies metus vitae</p>
+          </div>
+          <button class="show-more-btn">Show more</button>
+          <div class="candidate-vacancy__about-text hide">
+              <p>Mi ultrices et proin a ut quis enim pharetra. In aliquam sapien nam ullamcorper sit montes. Dui at dictumst sagittis hac velit enim euismod. In egestas urna risus urna, vitae adipiscing turpis.</p>
+              <p>2dsgasrarhaeh wearha wratj awa aq3T AWAW AW </p>
+              <p>31212412414</p>
+          </div>
+        </div>
+      </div>
+      <div class="invite__block candidate-vacancy-invite">
+        <button class="invite__block-btn accept__invite-btn">Accept invite</button>
+        <button class="invite__block-btn record__video-btn" disabled>Record video interview</button>
+        <button class="invite__block-btn send__message-btn">Send a message to employer</button>
+        <button class="invite__block-btn decline__offer-btn">Decline the offer</button>
+        <button class="invite__block-btn watch__video-btn">Watch video interview</button>
+        <a class="invite__block-warning" href="#">
+          <p>What do you need to do for your application to be considered:</p>
+          <ul>
+            <li>Record a video interview </li>
+            <li>Take the suggested tests</li>
+          </ul>
+        </a>
+        <div class="invite__block-info">
+          <p>You declined this offer</p>
+        </div>
       </div>
     </div>
-
-    <div class="vacancies__tabs-content">
-
-      <div class="vacancies__tab-content vacancies__tab-content-invitations">
-        <div class="vacancies__tab-content-info-box">
-          <img src="images/content/vacancies/vacancies-info-box.png" alt="vacancies">
-          <p>Here you will be able to view your invitations to vacancies</p>
-        </div>
-
-        <div class="vacancies__info">
-          <div class="vacancies__invite">
-            <span>15</span>
-            <p>invitations</p>
-          </div>
-          <div class="vacancies__sort">
-            <p>Sort by</p>
-            <button class="vacancies__sort-btn">Date invited</button>
-          </div>
-        </div>
-
-        <div class="vacancies__cards">
-
-          <div class="card__invitations">
-            <div class="card__invitations-info">
-              <div class="card__invitations-wrapper">
-                <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
-                <div class="card__invitations-box">
-                  <a class="card__invitations-speciality" href="#">
-                    <h2 class="company__speciality">Senior Product Designer</h2>
-                  </a>
-                  <a class="card__invitations-company-name" href="#">
-                    <h3 class="company__name">Sberbank Inc</h3>
-                  </a>
-                  <p class="info-block-icon info-location">United Arab Emirates</p>
-                </div>
-              </div>
-              <p class="info-block-icon info-price">USD 3,500-4,500 <span>per month</span></p>
-            </div>
-            <p class="card__invitations-about company__about">
-              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis Aliqua id fugiat nostrud irure.
-            </p>
-            <div class="info-block-new">New</div>
-          </div>
-
-          <div class="card__invitations">
-            <div class="card__invitations-info">
-              <div class="card__invitations-wrapper">
-                <img  class="company__logo" src="images/content/vacancies/company-logo-2.png" alt="company-logo">
-                <div class="card__invitations-box">
-                  <a class="card__invitations-speciality" href="#">
-                    <h2 class="company__speciality">Senior Product Designer</h2>
-                  </a>
-                  <a class="card__invitations-company-name" href="#">
-                    <h3 class="company__name">Sberbank Inc</h3>
-                  </a>
-                  <p class="info-block-icon info-location">United Arab Emirates</p>
-                </div>
-              </div>
-              <p class="info-block-icon info-price">USD 3,500 <span>per month</span></p>
-            </div>
-            <p class="card__invitations-about company__about">
-              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis Aliqua id fugiat nostrud irure. Aliqua id fugiat nostrud irure ex duis ed et d fugiat nostrud irure ex duis ea quis id quis ad et...
-            </p>
-            <div class="info-block-new">New</div>
-          </div>
-
-          <div class="card__invitations">
-            <div class="card__invitations-info">
-              <div class="card__invitations-wrapper">
-                <img  class="company__logo" src="images/content/vacancies/company-logo-2.png" alt="company-logo">
-                <div class="card__invitations-box">
-                  <a class="card__invitations-speciality" href="#">
-                    <h2 class="company__speciality">Senior Product Designer</h2>
-                  </a>
-                  <a class="card__invitations-company-name" href="#">
-                    <h3 class="company__name">Sberbank Inc</h3>
-                  </a>
-                  <p class="info-block-icon info-location">United Arab Emirates</p>
-                </div>
-              </div>
-              <p class="info-block-icon info-price">USD 3,500 <span>per month</span></p>
-            </div>
-            <p class="card__invitations-about company__about">
-              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis Aliqua id fugiat nostrud irure. Aliqua id fugiat nostrud irure ex duis ed et d fugiat nostrud irure ex duis ea quis id quis ad et.  Aliqua id fugiat nostrud irure ex duis ed et d fugiat nostrud irure ex duis ea quis id quis ad et.
-            </p>
-          </div>
-
-        </div>
-
+    <div class="skill-tests">
+      <div class="skill-tests__box">
+        <h4 class="skill-tests__title">Soft skills tests</h4>
+        <p class="skill-tests__time">Total time to complete the tests <span class="skill-tests__time-num"> 65 min</span></p>
       </div>
+      <div class="skill-tests__container">
 
-      <div class="vacancies__tab-content vacancies__tab-content-active">
-
-        <div class="card__vacancy card__vacancy-title">
-          <div class="card__vacancy-item card__vacancy-item-title">Company Name</div>
-          <div class="card__vacancy-item card__vacancy-item-title card__vacancy-item-title--active">Vacancies</div>
-          <div class="card__vacancy-item card__vacancy-item-title">Video interview</div>
-          <div class="card__vacancy-item card__vacancy-item-title">Tests completed</div>
-          <div class="card__vacancy-item card__vacancy-item-title">Closing deadline</div>
-          <div class="card__vacancy-item card__vacancy-item-title card__vacancy-item-title-chat">Chat</div>
+        <div class="skill-tests__card">
+          <h5 class="skill-tests__card-title">Leadership Test</h5>
+          <div class="skill-tests__card-item skill-tests__card-item-status">
+            <p class="skill-tests__card-item-title">Status</p>
+            <div class="block-status block-status__progress">In progress</div>
+          </div>
+          <div class="skill-tests__card-item skill-tests__card-item-questions">
+            <p class="skill-tests__card-item-title">Questions</p>
+            <div class="skill-tests__card-item-questions">16</div>
+          </div>
+          <div class="skill-tests__card-item skill-tests__card-item-time">
+            <p class="skill-tests__card-item-title progress">Time left</p>
+            <div class="skill-tests__card-item-time progress">5:15</div>
+          </div>
+          <p class="skill-tests__card-item-info skill-tests__card-item-info--progress">Not finishing the test may hurt your chances of getting the job. You still have time to return to the test.</p>
+          <div class="skill-tests__card-item-progress">
+            Прогресс бар
+          </div>
+          <button class="skill-tests__card-item-btn">Finish test</button>
         </div>
 
-        <div class="card__vacancy">
-          <a class="card__vacancy-item card__vacancy-item-name" href="#">
-            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
-            <h3 class="company__name">Sberbank Inc</h3>
-          </a>
-          <a class="card__vacancy-item" href="#">
-            <p>Internet Security Assistant</p>
-          </a>
-          <div class="card__vacancy-item">
-           <a class="card__vacancy-item-record" href="#">Record</a>
+        <div class="skill-tests__card">
+          <h5 class="skill-tests__card-title">Leadership Test</h5>
+          <div class="skill-tests__card-item skill-tests__card-item-status">
+            <p class="skill-tests__card-item-title">Status</p>
+            <div class="block-status block-status__new">New</div>
           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-tests">0/8</span>
+          <div class="skill-tests__card-item skill-tests__card-item-questions">
+            <p class="skill-tests__card-item-title">Questions</p>
+            <div class="skill-tests__card-item-questions">16</div>
           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-deadline">1 day left</span>
+          <div class="skill-tests__card-item skill-tests__card-item-time">
+            <p class="skill-tests__card-item-title">Time to complete</p>
+            <div class="skill-tests__card-item-time">8 min</div>
           </div>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-chat" href="#"></a>
+          <p class="skill-tests__card-item-info">The test evaluates the ability to influence other people. It is based on the concept of the famous German and American psychologist Kurt Lewin, who distinguished autocratic, democratic or liberal styles of leadership.
+            The test was developed by Maria Baulina, PhD in clinical psychology, Associate Professor of the Faculty of Clinical Psychology at Moscow Institute of Psychoanalysis. This test is a property of CallPanda.com.</p>
+          <div class="skill-tests__card-item-progress">
+            Прогресс бар
           </div>
+          <button class="skill-tests__card-item-btn">Take the test</button>
         </div>
 
-        <div class="card__vacancy">
-          <a class="card__vacancy-item card__vacancy-item-name" href="#">
-            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
-            <h3 class="company__name">Sberbank Inc</h3>
-          </a>
-          <a class="card__vacancy-item" href="#">
-            <p>Internet Security Assistant</p>
-          </a>
-          <div class="card__vacancy-item">
-           <a class="card__vacancy-item-record" href="#">Record</a>
+        <div class="skill-tests__card">
+          <h5 class="skill-tests__card-title">Leadership Test Lonr test name</h5>
+          <div class="skill-tests__card-item skill-tests__card-item-status">
+            <p class="skill-tests__card-item-title">Status</p>
+            <div class="block-status block-status__incomplete">Incomplete</div>
           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-tests">0/8</span>
+          <div class="skill-tests__card-item skill-tests__card-item-questions">
+            <p class="skill-tests__card-item-title">Questions</p>
+            <div class="skill-tests__card-item-questions">16</div>
           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-deadline">1 day left</span>
+          <div class="skill-tests__card-item skill-tests__card-item-time">
+            <p class="skill-tests__card-item-title">Time to complete</p>
+            <div class="skill-tests__card-item-time">8 min</div>
           </div>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-chat" href="#"></a>
+          <p class="skill-tests__card-item-info">The test evaluates the ability to influence other people. It is based on the concept of the famous German and American psychologist Kurt Lewin, who distinguished autocratic, democratic or liberal styles of leadership.
+            The test was developed by Maria Baulina, PhD in clinical psychology, Associate Professor of the Faculty of Clinical Psychology at Moscow Institute of Psychoanalysis. This test is a property of CallPanda.com.</p>
+          <div class="skill-tests__card-item-progress">
+            Прогресс бар
           </div>
+          <button class="skill-tests__card-item-btn" disabled>Take the test</button>
         </div>
 
-        <div class="card__vacancy">
-          <a class="card__vacancy-item card__vacancy-item-name" href="#">
-            <img  class="company__logo" src="images/content/vacancies/company-logo-2.png" alt="company-logo">
-            <h3 class="company__name">Sberbank Inc</h3>
-          </a>
-          <a class="card__vacancy-item" href="#">
-            <p>Internet Security Assistant</p>
-          </a>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-video" href="#">
-              <img src="images/content/card/card-photo-1.jpg" alt="video-jobs">
-            </a>
+        <div class="skill-tests__card">
+          <h5 class="skill-tests__card-title">Leadership Test Lonr test name</h5>
+          <div class="skill-tests__card-item skill-tests__card-item-status">
+            <p class="skill-tests__card-item-title">Status</p>
+            <div class="block-status block-status__completed">Completed</div>
           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-tests">0/8</span>
+          <div class="skill-tests__card-item skill-tests__card-item-questions">
+            <p class="skill-tests__card-item-title">Questions</p>
+            <div class="skill-tests__card-item-questions">16</div>
           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-deadline">1 day left</span>
+          <div class="skill-tests__card-item skill-tests__card-item-time">
+            <p class="skill-tests__card-item-title">Time to complete</p>
+            <div class="skill-tests__card-item-time">8 min</div>
           </div>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-chat" href="#"></a>
+          <p class="skill-tests__card-item-info">The test evaluates the ability to influence other people. It is based on the concept of the famous German and American psychologist Kurt Lewin, who distinguished autocratic, democratic or liberal styles of leadership.
+            The test was developed by Maria Baulina, PhD in clinical psychology, Associate Professor of the Faculty of Clinical Psychology at Moscow Institute of Psychoanalysis. This test is a property of CallPanda.com.</p>
+          <div class="skill-tests__card-item-progress">
+            Прогресс бар
           </div>
-        </div>
-
-        <div class="card__vacancy">
-          <a class="card__vacancy-item card__vacancy-item-name" href="#">
-            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
-            <h3 class="company__name">Sberbank Inc</h3>
-          </a>
-          <a class="card__vacancy-item" href="#">
-            <p>Internet Security Assistant</p>
-          </a>
-          <div class="card__vacancy-item">
-           <a class="card__vacancy-item-record" href="#">Record</a>
-          </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-tests">0/8</span>
-          </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-deadline">1 day left</span>
-          </div>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-chat" href="#"></a>
-          </div>
-        </div>
-
-        <div class="card__vacancy">
-          <a class="card__vacancy-item card__vacancy-item-name" href="#">
-            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
-            <h3 class="company__name">Sberbank Inc</h3>
-          </a>
-          <a class="card__vacancy-item" href="#">
-            <p>Internet Security Assistant</p>
-          </a>
-          <a class="card__vacancy-item-video" href="#">
-            <img src="images/content/card/card-photo-2.jpg" alt="video-jobs">
-          </a>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-tests">0/8</span>
-          </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-deadline">1 day left</span>
-          </div>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-chat card__vacancy-item-chat--avaliable" href="#"></a>
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="vacancies__tab-content vacancies__tab-content-archive">
-
-        <div class="card__vacancy card__vacancy-title">
-          <div class="card__vacancy-item card__vacancy-item-title">Company Name</div>
-          <div class="card__vacancy-item card__vacancy-item-title card__vacancy-item-title--active">Vacancies</div>
-          <div class="card__vacancy-item card__vacancy-item-title">Vacancy status</div>
-          <div class="card__vacancy-item card__vacancy-item-title">Video interview</div>
-          <div class="card__vacancy-item card__vacancy-item-title">Tests completed</div>
-          <div class="card__vacancy-item card__vacancy-item-title">Date invited</div>
-        </div>
-
-        <div class="card__vacancy">
-          <a class="card__vacancy-item card__vacancy-item-name" href="#">
-            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
-            <h3 class="company__name">Sberbank Inc</h3>
-          </a>
-          <a class="card__vacancy-item" href="#">
-            <p>Internet Security Assistant</p>
-          </a>
-          <div class="card__vacancy-item">
-            <div class="card__vacancy-status">
-              <span class="card__tag closed">Closed</span>
-            </div>
-          </div>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-record" href="#">Record</a>
-           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-tests">0/8</span>
-          </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-date">25.05.2022</span>
-          </div>
-        </div>
-
-        <div class="card__vacancy">
-          <a class="card__vacancy-item card__vacancy-item-name" href="#">
-            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
-            <h3 class="company__name">Sberbank Inc</h3>
-          </a>
-          <a class="card__vacancy-item" href="#">
-            <p>Internet Security Assistant</p>
-          </a>
-          <div class="card__vacancy-item">
-            <div class="card__vacancy-status">
-              <span class="card__tag declined">Declined</span>
-            </div>
-          </div>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-record" href="#">Record</a>
-           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-tests">0/8</span>
-          </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-date">25.05.2022</span>
-          </div>
-        </div>
-
-        <div class="card__vacancy">
-          <a class="card__vacancy-item card__vacancy-item-name" href="#">
-            <img  class="company__logo" src="images/content/vacancies/company-logo-1.svg" alt="company-logo">
-            <h3 class="company__name">Sberbank Inc</h3>
-          </a>
-          <a class="card__vacancy-item" href="#">
-            <p>Internet Security Assistant</p>
-          </a>
-          <div class="card__vacancy-item">
-            <div class="card__vacancy-status">
-              <span class="card__tag rejected">Rejected</span>
-            </div>
-          </div>
-          <div class="card__vacancy-item">
-            <a class="card__vacancy-item-record" href="#">Record</a>
-           </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-tests">0/8</span>
-          </div>
-          <div class="card__vacancy-item">
-            <span class="card__vacancy-item-date">25.05.2022</span>
-          </div>
+          <button class="skill-tests__card-item-btn" disabled>Take the test</button>
         </div>
 
       </div>
     </div>
-
   </div>
 </div>
 </section>
@@ -353,8 +216,8 @@
 
 
 
+</div>
 
-</main>
 
 
 

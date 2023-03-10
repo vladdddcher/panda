@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+@@include('html/header.html', {})
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+
+
+
+<main class="main">
+<section class="page__links">
+<div class="container">
+  <div class="page__links-inner">
+    <h1>Ссылки на все страницы сайта:</h1>
+
+    <ul>
+      <li>
+        <a href="headers.html" target="_blank">Страница co всеми header</a>
+      </li>
+      <li>
+        <a href="persona.html" target="_blank">Страница кандидата</a>
+      </li>
+      <li>
+        <a href="persona-vacancies.html" target="_blank">Страница мои вакансии</a>
+      </li>
+      <li>
+        <a href="cards.html" target="_blank">Страница карточек кандидатов</a>
+      </li>
+      <li>
+        <a href="candidate-sing-in.html" target="_blank">Страница входа кандидата</a>
+      </li>
+      <li>
+        <a href="candidate-registration.html" target="_blank">Страница регистрации кандидата</a>
+      </li>
+      <li>
+        <a href="business-registration.html" target="_blank">Страница регистрации бизнеса</a>
+      </li>
+      <li>
+        <a href="business-sing-in.html" target="_blank">Страница страница входа бизнеса</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>

@@ -8,12 +8,27 @@
 
 // pages
 
+@import 'pages/cols';
 @import 'pages/modals';
 @import 'pages/cards';
 @import 'pages/persona';
 @import 'pages/registration';
-@import 'pages/vacancies';
+@import 'pages/persona-vacancies';
+@import 'pages/candidate-vacancy.scss';
 
+.page__links {
+    padding: 40px 0;
+    &-inner {
+        text-align: center;
+    }
+    h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+}
 
 .telegram {
     width: 33px;
@@ -114,6 +129,16 @@
         background-image: url('../images/icons/card-job.svg');
     }
 }
+.info-remote__work {
+    &::after {
+        background-image: url('../images/icons/monitor-icon.svg');
+    }
+}
+.info-deadline {
+    &::after {
+        background-image: url('../images/icons/clock-green-icon.svg');
+    }
+}
 
 .invite-btn {
     padding: 12px 16px 12px 48px;
@@ -122,7 +147,8 @@
     color: $white;
     border-radius: 8px;
     position: relative;
-    max-width: 145px;
+    max-width: 161px;
+    font-size: 18px;
     &::after {
         position: absolute;
         content: '';
@@ -144,8 +170,7 @@
 }
 
 .company__speciality {
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @include cropText;
     max-width: 290px;
     padding: 2px 0;
     overflow: hidden;
@@ -155,15 +180,57 @@
     color: #666;
 }
 
-.info-block-new {
-    display: inline-block;
-    padding: 6px 32px;
+.show-more-btn {
     color: $linkActive;
-    font-weight: 500;
-    font-size: 14px;
-    background-color: #D2EED7;
+    margin-top: 10px;
+    font-weight: 600;
+    &:hover {
+        color: $linkHover;
+    }
+}
+
+.hide {
+    display: none;
+    background-color: rebeccapurple;
+}
+
+// status ----- Status
+
+.block-status {
+    width: 100px;
+    height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
     border-radius: 4px;
     pointer-events: none;
+    font-size: 14px;
+
+}
+.block-status__new {
+    color: $linkActive;
+    background-color: #D2EED7;
+}
+.block-status__closed {
+    background-color: #E5F0FF;
+    color: #0066FF;
+}
+.block-status__progress {
+    background-color: #FFEBEC;
+    color: #F91F43;
+}
+.block-status__rejected {
+    background-color: #F7E3FF;
+    color: #8C3EF0;
+}
+.block-status__incomplete {
+    color: #FF5C00;
+    background-color: #FFEFE2;
+}
+.block-status__completed {
+    color: #0066FF;
+    background-color: #E5F0FF;
 }
 
 
@@ -172,191 +239,55 @@
     font-size: 17px;
 }
 
-.card__tag {
-    width: 100px;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 14px;
+
+.block-flex-start {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 28px;
-}
-
-.closed {
-    background-color: #E5F0FF;
-    color: #0066FF;
-}
-.declined {
-    background-color: #FFEBEC;
-    color: #F91F43;
-}
-.rejected {
-    background-color: #F7E3FF;
-    color: #8C3EF0;
+    align-items: start;
 }
 
 
-.card__vacancy {
-    justify-content: space-between;
-    display: grid;
-    grid-template-columns: 268px 268px 133px 137px 136px 37px;
-    align-items: center;
-    padding: 24px;
-    white-space: nowrap;
-    border-radius: 8px;
-    &:nth-child(odd) {
-        background-color: #F4F7F7;
-    }
-    &:first-child {
-        background-color: #D2EED7;
-    }
-    &-item {
-        font-weight: 500;
-        color: #3E3E3E;
-        position: relative;
-    }
-    &-item-name {
+.breadcrumbs {
+    margin: 16px 0 22px;
+    font-size: 12px;
+    ul {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
-    &-item-title {
-        cursor: pointer;
-        position: relative;
-        color: #666;
-        font-size: 14px;
-        max-width: max-content;
+    li {
+        margin-right: 8px;
         padding-right: 24px;
+        display: block;
+        color: $linkActive;
+        font-size: 12px;
+        margin-bottom: 10px;
+        position: relative;
         &::after {
             position: absolute;
             content: '';
-            background-image: url('../images/icons/vacancies-arrow.svg');
-            width: 16px;
-            height: 16px;
-            background-repeat: no-repeat;
+            transform: translateY(-50%);
             right: 0;
             top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-    &-item-title-chat {
-        &::after {
-            display: none;
-        }
-    }
-    &-item-title--active {
-        color: $linkActive;
-        &::after {
-            background-image: url('../images/icons/vacancies-arrow-active.svg');
-
-        }
-    }
-    .company__logo {
-        display: inline-block;
-        padding: 14px;
-        margin-right: 16px;
-        border-radius: 50%;
-        background-color: $white;
-    }
-    &-item-record {
-        font-weight: 600;
-        color: $linkActive;
-        padding-left: 40px;
-        position: relative;
-        &::after {
-            position: absolute;
-            content: '';
-            width: 32px;
-            height: 32px;
-            background-image: url('../images/icons/record-icon.svg');
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-image: url('../images/icons/breadcrumbs-arrow.svg');
             background-repeat: no-repeat;
         }
-    }
-    &-item-video {
-        width: 105px;
-        height: 80px;
-        img {
-            max-width: 105px;
-            width: 100%;
-            max-height: 80px;
-            height: 100%;
-            background-size: cover;
-        }
-    }
-    &-item-tests {
-        text-align: center;
-        display: block;
-    }
-    &-item-chat {
-        width: 32px;
-        height: 32px;
-        position: relative;
-        &::after {
-            position: absolute;
-            content: '';
-            width: 32px;
-            height: 32px;
-            top: -10px;
-            left: 0;
-            background-image: url('../images/icons/message-icon.svg');
-        }
-        &::before {
-            position: absolute;
-            content: 'Active chat';
-            background-color: #F4F7F7;
-            padding: 5px 10px;
-            top: 21px;
-            right: -30px;
-            border-radius: 4px;
-            opacity: 0;
-            transition: linear .2s;
-            pointer-events: none;
-            box-shadow: $smallBoxShadow;
-        }
         &:hover {
-            &::before {
-                opacity: 1;
+            color: $hoverGreen;
+        }
+        &:last-child {
+            margin-right: 0;
+            color: #888B8F;
+            &:hover {
+                color: $hoverGreen;
+            }
+            &::after {
+                display: none;
             }
         }
     }
-    &-item-date {
-        display: block;
-        text-align: center;
-    }
-    &-item-chat--avaliable {
-        &::after {
-            background-image: url('../images/icons/message-avaliable-icon.svg');
-        }
-        &::before {
-            content: 'Chat not avaliable';
-            opacity: 0;
-            transition: linear .2s;
-        }
-        &:hover {
-            &::before {
-                opacity: 1;
-            }
-        }
-    }
-}
-.card__vacancy-title {
-    background-color: #D2EED7;
-    padding: 16px 24px;
-    border-radius: 8px;
-}
 
-.vacancies__tab-content-active {
-    display: none
-}
-
-.vacancies__tab-content-archive {
-    .card__vacancy {
-        grid-template-columns: 268px 268px 127px 133px 133px 105px;
-
-    }
 }
 
 
@@ -405,12 +336,35 @@
 
 
 
-
-
-
-
-
-
+.upload-box{
+    position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     height: 279px;
+//     width: 271px;
+//     margin: 50px 30px 0 0;
+//     border: dashed 2px #E0E0E0FF;
+//     border-radius: 4px;
+}
+.circle-ring{
+    position: relative;
+}
+.circle-progress{
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset linear 8s;
+}
+.circle-percent{
+    position: absolute;
+    top: calc(50% - 25px);
+    top: 50%;
+    left: 50px;
+    transform: translate(-50% -50%);
+    font-size: 32px;
+    font-weight: 700;
+}
 
 
 
