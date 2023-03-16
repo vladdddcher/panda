@@ -250,7 +250,7 @@
         &::before {
             position: absolute;
             content: 'Active chat';
-            background-color: #F4F7F7;
+            background-color: $otherBackground;
             padding: 5px 10px;
             top: 21px;
             right: -30px;

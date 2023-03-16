@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+@@include('html/header.html', {})
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+
+
+
+<main class="main">
+
+  
+<div class="container lol">
+  
+
+
+  
+<div class="form-group">
+  <div class="dropdown">
+    <div class="dropdown__button">Заметки путешественника</div>
+  
+    <ul class="dropdown__list">
+      <li class="dropdown__list-item" data-value="russia">Russia</li>
+      <li class="dropdown__list-item" data-value="USA">USA</li>
+      <li class="dropdown__list-item" data-value="canada">Canada</li>
+      <li class="dropdown__list-item" data-value="ukraine">Ukraine</li>
+      <li class="dropdown__list-item" data-value="germany">Germany</li>
+      <li class="dropdown__list-item" data-value="france">France</li>
+      <li class="dropdown__list-item" data-value="australia">Australia</li>
+    </ul>
+    <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+  </div>
+  
+</div>
+
+
+<div class="form-group">
+  <div class="dropdown">
+    <div class="dropdown__button">Заметки путешественника</div>
+  
+    <ul class="dropdown__list">
+      <li class="dropdown__list-item" data-value="russia">Russia</li>
+      <li class="dropdown__list-item" data-value="USA">USA</li>
+      <li class="dropdown__list-item" data-value="canada">Canada</li>
+      <li class="dropdown__list-item" data-value="ukraine">Ukraine</li>
+      <li class="dropdown__list-item" data-value="germany">Germany</li>
+      <li class="dropdown__list-item" data-value="france">France</li>
+      <li class="dropdown__list-item" data-value="australia">Australia</li>
+    </ul>
+    <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>

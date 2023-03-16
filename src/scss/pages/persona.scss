@@ -14,6 +14,7 @@
         white-space: nowrap;
         max-width: 320px;
         overflow: hidden;
+        height: 44px;
     }
     &__inner {
         border-top: 1px solid $borderGray;
@@ -126,6 +127,7 @@
 
     &__right {
         padding-left: 48px;
+        width: 100%;
     }
     &__right-box {
         padding: 32px 0;
@@ -246,6 +248,147 @@
     }
 }
 
+.my-profile {
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+    .persona__title {
+        margin-bottom: 0;
+    }
+    &__tabs-btn {
+        margin-right: 60px;
+        padding-left: 28px;
+        font-weight: 500;
+        position: relative;
+        &::after {
+            @include afterTopAbsolute;
+            background-image: url('../images/icons/profile-check-tabs-icon.svg');
+            width: 20px;
+            height: 20px;
+            left: 0;
+        }
+        &::before {
+            opacity: 0;
+            position: absolute;
+            content: '';
+            height: 2px;
+            bottom: -26px;
+            left: 0;
+            width: 100%;
+            background-color: $hoverGreen;
+            transition: linear .2s;
+        }
+        &:hover {
+            color: $hoverGreen;
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+    &__tabs-btn--active {
+        color: $linkActive;
+        &:hover {
+            color: $hoverGreen;
+        }
+        &::before {
+            opacity: 1;
+            background-color: $linkActive;
+        }
+    }
+    &__widget {
+        display: flex;
+        align-items: center;
+    }
+    &__help {
+        position: relative;
+        margin-left: 10px;
+    }
+    &__help-question-icon {
+        color: #888B8F;
+        &:hover {
+            color: $linkActive;
+        }
+    }
+    &__help-question-list {
+        opacity: 0;
+        transition: linear .3s;
+        position: absolute;
+        width: 300px;
+        bottom: -230px;
+        right: -10px;
+        box-shadow: $bigBoxShadow;
+        background-color: $otherBackground;
+        border-radius: 8px;
+        padding: 8px 16px 8px 40px;
+        font-size: 14px;
+        line-height: 20px;
+        pointer-events: none;
+        li {
+            list-style: decimal;
+        }
+        p {
+            font-weight: 500;
+        }
+        span {
+            color: #3E3E3E;
+        }
+    }
+    .my-profile__help-question-icon:hover ~ .my-profile__help-question-list {
+        opacity: 1;
+    }
+    &__tabs-personal-information {
+        // display: none;
+    }
+    &__tabs-video-resume {
+        display: none;
+        // !!!!!!!!!!!!!!!!!!!!
+        margin-top: 32px;
+        border-radius: 10px;
+        background-color: $otherBackground;
+        width: 100%;
+        padding: 180px 0 203px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        img {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 16px;
+        }
+        h4 {
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        p {
+            max-width: 430px;
+            line-height: 24px;
+            margin-bottom: 32px;
+        }
+        button {
+            @include greenbtn;
+            padding: 12px 35px 12px 67px;
+            &::after {
+                @include afterTopAbsolute;
+                left: 35px;
+                background-image: url('../images/icons/record-video-btn-icon.svg');
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+
+
+
 @media (max-width: 1205px) {
     .persona__right {
         padding-left: 20px;
@@ -279,6 +422,16 @@
     .persona {
         padding: 16px 0;
     }
+    
+    .my-profile {
+        .persona__right {
+            padding-right: 20px;
+        }
+    }
+    .my-profile__tabs-video-resume {
+        margin-left: 20px;
+        padding: 100px 0;
+    }
 }
 
 
@@ -295,6 +448,38 @@
     }
     .persona__right {
         border-top: 1px solid $borderGray;
+    }
+    .my-profile__tabs-video-resume {
+        padding: 30px 0;
+        margin-left: 0;
+    }
+    .my-profile {
+        .persona__right {
+            padding-right: 0;
+        }
+        .persona__title {
+            margin-bottom: 15px;
+        }
+        .my-profile-wrapper {
+            display: block;
+        }
+        .my-profile__tabs-btn::before {
+            bottom: -17px;
+        }
+        .my-profile__tabs-btn {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .my-profile__widget {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+    .my-profile__help-question-list {
+        right: 0;
     }
 }
 
@@ -329,10 +514,22 @@
     .persona__left {
         min-width: 290px;
     }
+    .my-profile .my-profile__tabs-btn {
+        font-size: 14px;
+        :last-child {
+            margin-right: 0;
+        }
+    }
+    .my-profile-wrapper {
+        margin-top: 35px;
+    }
 }
 
 @media (max-width: 440px) {
     .persona__left-title {
         max-width: 170px;
+    }
+    .my-profile .my-profile__tabs-btn {
+        font-size: 12px;
     }
 }

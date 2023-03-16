@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+<!-- @@include('html/header.html', {}) -->
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+@@include('html/header-guest-white.html', {})
+
+
+
+
+
+<main class="main">
+
+<section class="after-registration">
+<div class="container">
+  <div class="after-registration__inner">
+    <div class="after-registration__item">
+      <h1 class="after-registration__title">
+        Success! The next three steps will bring you closer to finding your dream job
+      </h1>
+      <ul class="after-registration__list">
+        <li>
+          <div class="after-registration__num">1</div>
+          <div class="after-registration__box">
+            <p>Fill out your profile</p>
+            <span>Employers see only complete profiles.</span>
+          </div>
+        </li>
+        <li>
+          <div class="after-registration__num">2</div>
+          <div class="after-registration__box">
+            <p>Record a short video about yourself</p>
+            <span>Candidates with recorded videos are invited to interviews more often.</span>
+          </div>
+        </li>
+        <li>
+          <div class="after-registration__num">3</div>
+          <div class="after-registration__box">
+            <p>Publish your profile to get hired</p>
+            <span>Click Publish and wait for invitations from potential employers.</span>
+          </div>
+        </li>
+      </ul>
+      <a class="after-registration__link" href="#">Continue</a>
+    </div>
+    <a class="after-registration__img" href="#">
+      <img src="images/content/after-registration/after-registration.png" alt="watch video">
+    </a>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>

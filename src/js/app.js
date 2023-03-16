@@ -189,30 +189,57 @@ vacansyCads();
 } catch(e){}
 
 
+// document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper) {
+   
+//   const dropDownBtn = dropdownWrapper.querySelector('.dropdown__button');
+//   const dropDownlist = dropdownWrapper.querySelector('.dropdown__list ');
+//   const dropDownlistItems = document.querySelectorAll('.dropdown__list-item');
+//   const dropDownInput = dropdownWrapper.querySelector('.dropdown__input-hidden');
 
-// const circle = document.querySelector('.circle-progress');
-//     const circleRadius = circle.r.baseVal.value;
-//     const circumference = 2 * Math.PI * circleRadius;
-//     const circlePercent = document.querySelector('.circle-percent');
-//     let count = 0;
 
-//     circle.style.strokeDasharray = `${circumference} ${circumference}`;
-//     circle.style.strokeDashoffset = circumference;
-//     console.log(circumference)
+//   dropDownBtn.addEventListener('click', function () {
+    
+//     dropDownlist.classList.toggle('dropdown__list--visible');
+    
+    
+//   });
 
-//     function setProgress(percent) {
+//   dropDownlistItems.forEach(function (listItem) {
+//     listItem.addEventListener('click', function (e) {
+//       e.stopPropagation();
+//       dropDownBtn.innerText = this.innerText;
+//       dropDownInput.value = this.dataset.value;
+//       dropDownlist.classList.remove('dropdown__list--visible');
+//     })
+//   })
 
-//         const offsetCount = setInterval(() => {
-//             if(circle.style.strokeDashoffset >= circumference) {
-//                 clearInterval(offsetCount);
-//             } circle.style.strokeDashoffset -= 1;
-//               circle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
+//   document.addEventListener('click', function(e) {
+//     if (e.target !== dropDownBtn) {
+//       dropDownlist.classList.remove('dropdown__list--visible');
+//     }
+//   });
 
-//             circlePercent.innerHTML = count + '%';
-//             if (count >= percent) {
-//                 clearInterval(offsetCount)
-//             }
-//             count += 1;
-//         }, 100)
-//     };
-//     setProgress(50);
+
+//   document.addEventListener('keydown', function(e) {
+//     if (e.key === 'Tab' || e.key === 'Escape') {
+//       dropDownlist.classList.remove('dropdown__list--visible');
+//     }
+//   })
+  
+// });
+
+
+
+
+
+
+
+import dropDown from './modules/dropdown';
+
+dropDown();
+
+
+
+
+
+

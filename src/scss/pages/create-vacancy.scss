@@ -1,0 +1,279 @@
+
+
+.create-edit-vacancy {
+    padding-bottom: 30px;
+    &__inner {
+        margin-top: 16px;
+        border-top: 1px solid $borderGray;
+        display: flex;
+    }
+    &__left {
+        border-right: 1px solid $borderGray;
+        width: 983px;
+        padding-right: 80px;
+    }
+    &-progress {
+        padding-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__left-inner {
+        display: flex;
+        margin-top: 30px;
+    }
+    &__items {
+        width: 568px;
+        margin-right: 80px;
+    }
+    &__item {
+        margin-bottom: 50px;
+    }
+    &-progress-item {
+        width: 222px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 24px;
+        color: #666;
+        &::after {
+            position: absolute;
+            border-radius: 8px;
+            content: '';
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            background-color: $otherBackground;
+            height: 8px;
+        }
+    }
+    &-progress-item--active {
+        color: $linkActive;
+        &::after {
+            background-color: $linkActive;
+        }
+    }
+    &__box-width {
+        width: 268px;
+    }
+    &__box-width-input {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 10px;
+            pointer-events: none;
+            left: 16px;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/calendar-2-date.svg);
+            z-index: 3;
+        }
+    }
+    &__box-width-input--disabled {
+        &::after {
+            background-image: url('../images/icons/calendar-2-date-disable.svg');
+        }
+    }
+    &__item-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+    &__item-text {
+        margin-top: -10px;
+        margin-bottom: 32px;
+    }
+    &__item-hidden {
+        position: relative;
+        
+    }
+    &__item-remove-btn {
+        position: absolute;
+        top: 37px;
+        right: -37px;
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/icons/remove-btn.svg);
+        background-repeat: no-repeat;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__item-add-btn {
+        color: $linkActive;
+        font-weight: 600;
+        padding-left: 32px;
+        position: relative;
+        &:hover {
+            color: $hoverGreen;
+        }
+        &::after {
+            @include afterTopAbsolute;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url('../images/icons/add-btn.svg');
+        }
+    }
+    .persona__mail {
+        margin-bottom: 24px;
+    }
+    &__group-title {
+        color: #3e3e3e;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    &__group {
+        margin-bottom: 24px;
+    }
+    &__group-salary {
+        width: 178px;
+    }
+    &-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__group-input {
+        border-radius: 8px;
+        border: 1px solid $borderGray;
+        width: 100%;
+        height: 48px;
+        padding: 12px;
+        position: relative;
+        &:focus {
+            border: 1px solid $linkActive;
+        }
+    }
+    &__textarea {
+        width: 100%;
+        height: 120px;
+        border: 1px solid $borderGray;
+        border-radius: 8px;
+        resize: none;
+        padding: 12px 16px;
+        &:focus {
+            border: 1px solid $linkActive;
+        }
+        &::-webkit-scrollbar {
+            width: 3px;
+            background-color: transparent;
+            border-radius: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #D3D3D3;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    }
+    &__textarea-num {
+        text-align: right;
+        color: #666;
+        font-size: 12px;
+        line-height: 16px;
+        
+    }
+    &__upload {
+        margin-top: 55px;
+    }
+    &__group-checkbox-right {
+        margin-top: 16px;
+    }
+    &__upload-title {
+        font-weight: 600;
+    }
+    &__upload-wrapper {
+        display: flex;
+        margin-top: 10px;
+    }
+    &__upload-img {
+        width: 112px;
+        height: 112px;
+        border: 1px dashed $borderGray;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        &::after {
+            @include afterTopAbsolute;
+            top: 50%;
+            left: 50%;
+            width: 39px;
+            height: 39px;
+            background-image: url('../images/icons/upload-img-icon.svg');
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        img {
+            object-fit: cover;
+            width: 112px;
+            height: 112px;
+        }
+    }
+    &__upload-buttons {
+        margin-left: 16px;
+    }
+    &__right {
+        padding: 32px 0 0 46px;
+    }
+    &__right-btn {
+        width: 100%;
+        height: 48px;
+        margin-bottom: 40px;
+    }
+}
+
+.input-date-birth {
+    padding-left: 48px;
+    &:disabled {
+        pointer-events: none;
+        background-color: $otherBackground;
+    }
+}
+
+
+
+@media (max-width: 1366px) {
+    .create-edit-vacancy__inner {
+        display: block;
+    }
+    .create-edit-vacancy__left {
+        width: 100%;
+        padding-right: 0;
+        border-right: none;
+    }
+    .create-edit-vacancy__right {
+        padding: 0;
+    }
+    .create-edit-vacancy__right-btn {
+        max-width: 568px;
+    }
+}
+
+@media (max-width: 960px) {
+    .create-edit-vacancy__left-inner {
+        flex-direction: column;
+    }
+    .create-edit-vacancy__upload {
+        order: -1;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .create-edit-vacancy__items {
+        max-width: 568px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .create-edit-vacancy-flex {
+        flex-direction: column;
+    }
+    .create-edit-vacancy__box-width {
+        width: 100%;
+    }
+    .create-edit-vacancy {
+        .title {
+            font-size: 25px;
+        }
+    }
+}

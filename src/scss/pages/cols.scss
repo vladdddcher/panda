@@ -9,7 +9,7 @@
     white-space: nowrap;
     border-radius: 8px;
     &:nth-child(odd) {
-        background-color: #F4F7F7;
+        background-color: $otherBackground;
     }
     &:first-child {
         background-color: #D2EED7;
@@ -46,7 +46,7 @@
         display: block;
         border: 1px solid $linkActive;
         margin-bottom: 20px;
-        background-color: #F4F7F7;
+        background-color: $otherBackground;
         box-shadow: $smallBoxShadow;
         &:last-child {
             margin-bottom: 0;

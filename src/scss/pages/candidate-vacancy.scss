@@ -8,13 +8,15 @@
         display: inline-block;
         margin-bottom: 20px;
         margin-right: 24px;
+        @include cropText;
+        max-width: 300px;
     }
     .block-flex-start {
         border-bottom: 1px solid $borderGray;
     }
     &__header {
         margin: 32px 0;
-        background-color: #F4F7F7;
+        background-color: $otherBackground;
         border-radius: 8px;
         padding: 12px 24px;
         display: flex;
@@ -97,7 +99,7 @@
         padding: 4px 8px;
         font-size: 14px;
         color: #666;
-        background-color: #F4F7F7;
+        background-color: $otherBackground;
         border-radius: 4px;
     }
     &__about-text {
@@ -137,7 +139,7 @@
         width: 320px;
         height: 168px;
         border-radius: 8px;
-        background-color: #F4F7F7;
+        background-color: $otherBackground;
     }
     .accept__invite-btn {
         background-color: $linkActive;
@@ -236,7 +238,7 @@
         margin-right: 32px;
     }
     &__time {
-        background-color: #F4F7F7;
+        background-color: $otherBackground;
         border-radius: 8px;
         padding: 8px 10px 8px 40px;
         position: relative;
@@ -309,6 +311,12 @@
         width: 72px;
         height: 72px;
         overflow: hidden;
+        font-size: 12px;
+        border: 1px solid #3E3E3E;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &-item-btn {
         width: 175px;
@@ -343,6 +351,13 @@
     .candidate-vacancy__info {
         margin-right: 20px;
     }
+    .skill-tests__card {
+        padding: 15px 10px;
+    }
+    .skill-tests__card-item-info {
+        max-width: 340px;
+        height: 77px;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -356,13 +371,179 @@
     }
 }
 
-@media (max-width: 890px) {
-    .candidate-vacancy__header-box {
+@media (max-width: 1240px) {
+    .skill-tests__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+    .skill-tests__card-item-info {
+        max-width: max-content;
+    }
+    .skill-tests__card {
         flex-direction: column;
+        margin-bottom: 0;
+    }
+    .skill-tests__card-title {
+        margin-bottom: 20px;
+    }
+    .skill-tests__card-item {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .skill-tests__card-item-info {
+        height: auto;
+        max-height: 77px;
+    }
+    .skill-tests__card-item-title {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    .skill-tests__card-item-questions {
+        margin-top: 0;
+    }
+    .skill-tests__card-item-time {
+        margin-top: 0;
+    }
+    .skill-tests__card-item-info {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .skill-tests__card-item-btn {
+        margin-top: 15px;
+        width: 100%;
     }
 }
 
+@media (max-width: 890px) {
+    .candidate-vacancy__header-logo {
+        margin-bottom: 15px;
+    }
+    .candidate-vacancy__header-box {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .candidate-vacancy {
+        .info-price {
+            margin-bottom: 10px;
+        }
+    }
+    .candidate-vacancy__header-wrapper {
+        margin-left: 0;
+    }
+}
 
+@media (max-width: 767px) {
+    .candidate-vacancy__title {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .candidate-vacancy__header {
+        margin: 16px 0;
+    }
+    .candidate-vacancy__content {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .candidate-vacancy__info {
+        margin-right: 0;
+    }
+    .candidate-vacancy-invite {
+        order: -1;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .candidate-vacancy__about-title {
+        font-size: 18px;
+    }
+    .candidate-vacancy__about {
+        padding: 14px 0;
+    }
+    .candidate-vacancy__about-text {
+        margin-top: 10px;
+        P {
+            line-height: 20px;
+            font-size: 14px;
+        }
+    }
+    .skill-tests__box {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .skill-tests__time {
+        display: inline-block;
+    }
+    .skill-tests__title {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
 
-
+@media (max-width: 460px) {
+    .block-flex-start {
+        flex-direction: column;
+        
+    }
+    .candidate-vacancy__title {
+        font-size: 20px;
+    }
+    .candidate-vacancy__header {
+        padding: 12px;
+    }
+    .candidate-vacancy__header-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .candidate-vacancy {
+        .block-status__new {
+            order: -1;
+            margin-bottom: 10px;
+        }
+        .info-remote__work {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+    .candidate-vacancy__header {
+        .info-remote__work {
+            margin-bottom: 10px;
+        }
+    }
+    .candidate-vacancy .company__name {
+        max-width: 195px;
+    }
+    .candidate-vacancy__about-suptitle {
+        font-size: 12px;
+    }
+    .candidate-vacancy {
+        .invite__block-btn {
+            width: 300px;
+        }
+        .record__video-btn {
+            &::after {
+                left: 30px;
+            }
+        }
+        .send__message-btn {
+            &::after {
+                left: 7px;
+            }
+        }
+        .watch__video-btn {
+            &::after {
+                left: 33px;
+            }
+        }
+        .invite__block-warning {
+            width: 300px;
+        }
+        .invite__block-info {
+            width: 300px;
+        }
+    }
+}
 
