@@ -166,3 +166,15 @@
     background-color: $hoverGreen;
   }
 }
+
+@mixin borderGreenbtn {
+  background-color: $white;
+  border: 1px solid $linkActive;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #3E3E3E;
+  position: relative;
+  &:hover {
+    background-color: $otherBackground;
+  }
+}

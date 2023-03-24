@@ -70,8 +70,17 @@
         max-width: 486px;
         width: 100%;
         position: relative;
+        .just-validate-error-label {
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+        }
     }
-    
+    &__wrapper-email {
+        .just-validate-error-label {
+            display: none;
+        }
+    }
     &__wrapper-phone {
         display: flex;
     }
@@ -102,20 +111,13 @@
         transform: translateY(-50%);
     }
     &__input-send {
-        color: #D2EED7;
         font-weight: 600;
-    }
-    &__input-send--active {
         color: $linkActive;
-    }
-    &__input-show {
-        width: 24px;
-        height: 24px;
-        background-repeat: no-repeat;
-        background-image: url('../images/icons/eye.svg');
-    }
-    &__input-show--active {
-        background-image: url('../images/icons/eye-slash.svg');
+        &:disabled {
+            @include disabledBtn;
+            border: none;
+            background-color: transparent;
+        }
     }
     &__input-timer {
         color: #888B8F;
@@ -139,9 +141,7 @@
     &__err {
         color: #F91F43;
     }
-    &__link {
-        color: $linkActive;
-    }
+    
     &__btn {
         max-width: 486px;
         width: 100%;
@@ -189,4 +189,8 @@
     .form-enter__box {
         margin-bottom: 20px;
     }
+}
+
+.just-validate-error-field {
+    border: 1px solid red;
 }

@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+@@include('html/header.html', {})
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+
+
+
+<main class="main">
+<div class="container read-me" style="padding: 150px 0;">
+    
+    <p class="p">Памятки:</p>
+    
+    <!-- !!!!!!!!!!!!!!!!!!!Счетчик сиволов!!!!!!!!!!!!!! -->
+
+    Где нужен счет символов родителю инпута или текстарея дать класс "counter-wrapper"
+    самому текстовому полю дать класс "counter-text"
+    счетчику дать класс "counter-num"
+    
+    <p class="p">Пример:</p>
+
+    <div class="counter-wrapper">
+        <textarea class="counter-text" maxlength="1000"></textarea>
+        <p><span class="counter-num">0</span>/1000 symbols</p>
+    </div>
+    <!-- --------==========-----------==========-----------=========--------- -->
+    
+    
+    <p class="p">Пример инпута со счетом </p>
+    
+    
+    
+    <div class="group-field">
+        <h3 class="group-field__title">тест</h3>
+        <div class="group-field__wrapper counter-wrapper">
+            <input class="group-field__input counter-text" type="text" placeholder="placeholder" name="" maxlength="55">
+            <p class="create-edit-vacancy__symbols group-field__symbols">
+            <span class="counter-num">0</span>/55 symbols
+            </p>
+        </div>
+    </div>
+    
+    <p class="p">Пример инпута без счета </p>
+    
+    
+    <div class="group-field">
+        <h3 class="group-field__title">тест</h3>
+        <div class="group-field__wrapper">
+            <input class="group-field__input" type="text" placeholder="placeholder" name="">
+        </div>
+    </div>
+    
+  
+    
+    
+    
+    <p class="p">Пример textarea со счетом </p>
+    
+    
+    <div class="group-field">
+        <h3 class="group-field__title">Имя</h3>
+        <div class="group-field__wrapper counter-wrapper">
+          <textarea class="group-field__textarea counter-text" name="" placeholder="placeholder" maxlength="2000"></textarea>
+          <p class="create-edit-vacancy__symbols group-field__symbols">
+            <span class="counter-num">0</span>/2000 symbols
+          </p>
+        </div>
+    </div>
+    
+      <p class="p">Пример textarea без счета</p>
+      
+    
+      
+      <div class="group-field">
+        <h3 class="group-field__title">Имя</h3>
+        <div class="group-field__wrapper">
+            <textarea class="group-field__textarea" name="company description" placeholder="placeholder" maxlength="2000"></textarea>
+        </div>
+      </div>
+    
+    
+      <p class="p">Пример инпута с датой иконкой</p>
+    
+    
+    <div class="group-field">
+        <h3 class="group-field__title">тест</h3>
+        <div class="group-field__wrapper group-field__wrapper-date">
+            <input class="group-field__input group-field__input-date" type="text" placeholder="DD.MM.YYYY" name="">
+        </div>
+    </div>
+    
+    
+    <p class="p">поле для пороля</p>
+    
+    <div class="group-field group-field-password">
+      <h3 class="group-field__title">Password</h3>
+      <div class="group-field__wrapper">
+          <input class="group-field__input group-field__input-password" type="password" placeholder="Your password" name="password">
+          <button class="group-field__btn-show-hide"></button>  <!-- group-field__btn-show-hide--active -->
+          <a class="restore-password" href="#">Forgot your password?</a>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+</div>
+</main>
+
+
+
+
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>
+
+
+
+
+
+
+
+

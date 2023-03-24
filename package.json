@@ -74,6 +74,8 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "just-validate": "^4.2.0",
+    "nouislider": "^15.7.0",
     "swiper": "^8.4.5"
   }
 }

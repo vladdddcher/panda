@@ -129,105 +129,37 @@ try {
 } catch(e){}
 
 
-// vacansy card=========
-
-try{
 
 
 
-const vacansyCads = () => {
-  const btnInvitations = document.querySelector('.persona-vacancies__tabs-btn-invitations');
-  const btnActive = document.querySelector('.persona-vacancies__tabs-btn-active');
-  const btnArchive = document.querySelector('.persona-vacancies__tabs-btn-archive');
-
-  const contentInvitations = document.querySelector('.persona-vacancies__tab-content-invitations');
-  const contentActive = document.querySelector('.persona-vacancies__tab-content-active');
-  const contentArchive = document.querySelector('.persona-vacancies__tab-content-archive');
-
-  const btnActiveClass = 'persona-vacancies__tabs-btn--active';
-  const contentActiveClass = 'persona-vacancies__tab-content--active';
-
-  btnInvitations.addEventListener('click', () => {
-    btnInvitations.classList.add(btnActiveClass);
-    btnActive.classList.remove(btnActiveClass);
-    btnArchive.classList.remove(btnActiveClass);
-
-    contentInvitations.classList.add(contentActiveClass);
-    contentActive.classList.remove(contentActiveClass);
-    contentArchive.classList.remove(contentActiveClass);
-
-  });
-
-  btnActive.addEventListener('click', () => {
-    btnInvitations.classList.remove(btnActiveClass);
-    btnActive.classList.add(btnActiveClass);
-    btnArchive.classList.remove(btnActiveClass);
-
-    contentInvitations.classList.remove(contentActiveClass);
-    contentActive.classList.add(contentActiveClass);
-    contentArchive.classList.remove(contentActiveClass);
-  });
-
-  btnArchive.addEventListener('click', () => {
-    btnInvitations.classList.remove(btnActiveClass);
-    btnActive.classList.remove(btnActiveClass);
-    btnArchive.classList.add(btnActiveClass);
-
-    contentInvitations.classList.remove(contentActiveClass);
-    contentActive.classList.remove(contentActiveClass);
-    contentArchive.classList.add(contentActiveClass);
-  });
-
-
-
-
-};
-
-vacansyCads();
-
-
-} catch(e){}
-
-
-// document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper) {
-   
-//   const dropDownBtn = dropdownWrapper.querySelector('.dropdown__button');
-//   const dropDownlist = dropdownWrapper.querySelector('.dropdown__list ');
-//   const dropDownlistItems = document.querySelectorAll('.dropdown__list-item');
-//   const dropDownInput = dropdownWrapper.querySelector('.dropdown__input-hidden');
-
-
-//   dropDownBtn.addEventListener('click', function () {
-    
-//     dropDownlist.classList.toggle('dropdown__list--visible');
-    
-    
-//   });
-
-//   dropDownlistItems.forEach(function (listItem) {
-//     listItem.addEventListener('click', function (e) {
-//       e.stopPropagation();
-//       dropDownBtn.innerText = this.innerText;
-//       dropDownInput.value = this.dataset.value;
-//       dropDownlist.classList.remove('dropdown__list--visible');
-//     })
-//   })
-
-//   document.addEventListener('click', function(e) {
-//     if (e.target !== dropDownBtn) {
-//       dropDownlist.classList.remove('dropdown__list--visible');
-//     }
-//   });
-
-
-//   document.addEventListener('keydown', function(e) {
-//     if (e.key === 'Tab' || e.key === 'Escape') {
-//       dropDownlist.classList.remove('dropdown__list--visible');
-//     }
-//   })
+try {
+  const inputShow = () => {
+    const fixedInput = document.querySelector('.fixed-input');
+    const salaryHide = document.querySelectorAll('.salary-hide');
+    const salaryFixed = document.querySelector('.salary-fixed');
+    const salaryFixedRadio = document.querySelector('.salary-fixed-radio')
   
-// });
-
+    salaryHide.forEach(function(item) {
+      fixedInput.addEventListener('click', () => {
+        if (fixedInput.checked) {
+          salaryFixed.style.display = 'block'
+          salaryFixedRadio.style.display = 'block'
+          item.style.display = 'none'
+          
+        } else {
+          salaryFixed.style.display = 'none'
+          salaryFixedRadio.style.display = 'none'
+          item.style.display = 'block'
+        }
+      })
+    })
+    
+    
+  
+  };
+  
+  inputShow()
+} catch(e) {}
 
 
 
@@ -235,8 +167,44 @@ vacansyCads();
 
 
 import dropDown from './modules/dropdown';
+import formValidator from './modules/formValidator';
+import counterSymbols from './modules/counterSymbols';
+import rangeSliders from './modules/range-slider';
+import tabs from './modules/tabs';
+import showHidePassword from './modules/showHidePassword';
 
-dropDown();
+
+
+// 1- родитель всех табов, 2- сам таб, 3 - родитель всего контента,  4 - активный класс для кнопки
+
+try {tabs('.persona-vacancies__tabs', '.persona-vacancies__tabs-btn', '.persona-vacancies__tab-content', 'persona-vacancies__tabs-btn--active');} catch(e) {};
+try {tabs('.my-profile__tabs', '.my-profile__tabs-btn', '.my-profile__tabs-content', 'my-profile__tabs-btn--active', 'block');} catch(e) {};
+// try {tabs('.persona-account__tabs', '.persona-account__tab', '.persona-account__tabs-content', 'persona-account__tab--active');} catch(e) {};
+
+
+
+
+try {showHidePassword()} catch(e){};
+  
+
+  
+  
+try { counterSymbols(); } catch(e){};
+
+try { dropDown(); } catch(e){};
+
+try { formValidator(); } catch(e){};
+
+try { rangeSliders();} catch(e) {};
+
+
+
+
+
+
+
+
+
 
 
 

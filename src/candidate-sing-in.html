@@ -26,38 +26,38 @@
       <a class="registration__link" href="#">Find personnel</a>
     </div>
     <div class="registration__box">
-      <h1 class="registration__title">Business registration</h1>
+      <h1 class="registration__title">Business registration Исправлено</h1>
       <p class="registration__subtitle">
         After registration you can find personnel for your business, as well as test, video interview and shortlist candidates based on machine learning algorithms.
       </p>
     </div>
-      <form class="form-enter">
+      <form class="form-enter" id="validator">
 
         <div class="form-enter__box">
-          <p class="form-enter__text">Email address</p>
-          <div class="form-enter__wrapper">
-            <input class="form-enter__input"  type="email" name="email" placeholder="example@mail.com"  required>
-          </div>
-          <div class="box">
-            <p class="form-enter__err input-hide-err" href="#">Wrong credential</p>
-          </div>
-        </div>
-
-        <div class="form-enter__box">
-          <p class="form-enter__text">Password</p>
-          <div class="form-enter__wrapper">
-            <input class="form-enter__input" type="password" placeholder="Your password" name="password"  required>
-            <div class="form-enter__input-box">
-              <button class="form-enter__input-show"></button><!-- form-enter__input-show--active -->
+          <div class="group-field">
+            <h3 class="group-field__title">Email address</h3>
+            <div class="group-field__wrapper">
+                <input class="group-field__input" type="email" placeholder="example@mail.com" name="email">
             </div>
           </div>
-          <div class="box">
-            <p class="form-enter__err input-hide-err" href="#">Wrong credential</p>
-            <a class="form-enter__link" href="#">Forgot your password?</a>
+        </div>
+
+        <div class="form-enter__box">
+          <div class="group-field group-field-password">
+            <h3 class="group-field__title">Password</h3>
+            <div class="group-field__wrapper">
+                <input class="group-field__input group-field__input-password" type="password" placeholder="Your password" name="password">
+                
+                <button class="group-field__btn-show-hide"></button><!-- group-field__btn-show-hide--active -->
+                <a class="restore-password" href="#">Forgot your password?</a>
+            </div>
           </div>
         </div>
+        
         <button class="form-enter__btn" type="submit">Continue</button>
       </form>
+      
+      
 
 
 

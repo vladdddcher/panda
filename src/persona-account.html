@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+<!-- @@include('html/header.html', {}) -->
+<!-- @@include('html/header-business.html', {}) -->
+@@include('html/header-candidates.html', {})
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+
+<main class="main">
+
+
+<section class="persona-account">
+<div class="container">
+  
+  <div class="persona-account__inner">
+    <div class="persona-account__header">
+      <h1 class="persona-account__title title">My account</h1>
+      
+      <div class="persona-account__tabs">
+        <button class="persona-account__tab persona-account__tab--active">Personal information</button>
+        <button class="persona-account__tab">Security</button>
+      </div>
+    </div>
+    
+    <div class="persona-account__tabs-content">
+      
+      <div class="persona-account__tab-content">
+        <form class="persona-account__info">
+          
+          <div class="persona-account__info-left">
+            <div class="persona-account__info-left-wrapper">
+              <h5 class="persona-account__tab-title">Personal information</h5>
+              <a class="persona__mail">ralph.edwards@example.com</a>
+              
+              <div class="form-enter__box">
+                <p class="form-enter__text">Mobile number</p>
+                <div class="form-enter__wrapper form-enter__wrapper-phone">
+                  <div class="form-group">
+                    <div class="dropdown dropdown-flag">
+                      <div class="dropdown__button">
+                        <img src="images/icons/flag-1.svg" alt="russia-flag">
+                      </div>
+                    
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item" data-value="russia">
+                          <div class="dropdown__list-item-box">
+                            <img src="images/icons/flad-russia-icon.svg" alt="russia-flag">
+                            <h3>Russia</h3>
+                          </div>
+                          <p>AD +7</p>
+                        </li>
+                        <li class="dropdown__list-item" data-value="usa">
+                          <div class="dropdown__list-item-box">
+                            <img src="images/icons/flag-1.svg" alt="usa-flag">
+                            <h3>Usa</h3>
+                          </div>
+                          <p>AD +985</p>
+                        </li>
+                        <li class="dropdown__list-item" data-value="usa">
+                          <div class="dropdown__list-item-box">
+                            <img src="images/icons/flag-2.svg" alt="usa-flag">
+                            <h3>Avstria</h3>
+                          </div>
+                          <p>AD +791</p>
+                        </li>
+                        <li class="dropdown__list-item" data-value="usa">
+                          <div class="dropdown__list-item-box">
+                            <img src="images/icons/flag-3.svg" alt="usa-flag">
+                            <h3>Canada</h3>
+                          </div>
+                          <p>AD +745</p>
+                        </li>
+                        <li class="dropdown__list-item" data-value="usa">
+                          <div class="dropdown__list-item-box">
+                            <img src="images/icons/flag-4.svg" alt="usa-flag">
+                            <h3>Strana</h3>
+                          </div>
+                          <p>AD +11</p>
+                        </li>
+                      </ul>
+                      <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                    </div>
+                  </div>
+                  <input class="form-enter__input input-phone" type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _" value="" name="phone">
+                </div>
+              </div>
+              
+              <div class="persona-account__info-left-group">
+                <div class="group-field">
+                  <h3 class="group-field__title">First name</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input" type="text" placeholder="e.g. Ralph" name="name">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="persona-account__info-left-group">
+                <div class="group-field">
+                  <h3 class="group-field__title">Last name</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input" type="text" placeholder="e.g. Edward" name="last-name">
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            
+            <div class="persona-account__info-left-upload">
+              <div class="upload">
+                <p class="upload__title">Logo</p>
+                <div class="upload-wrapper">
+                  <div class="upload__img">
+                    <!-- Просто раскоментировать изображение и оно станет как нужно -->
+                    <!-- <img src="images/content/card/card-photo-2.jpg" alt=""> -->
+                  </div>
+                  <div class="upload__buttons">
+                    <div class="upload-btn">
+                      Upload
+                      <input class="upload-btn-input upload__input" type="file" name="upload">
+                    </div>
+                    
+                    <button class="delete-btn" disabled>Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+              
+          </div>
+          
+          
+          <div class="persona-account__info-right">
+            <button class="persona-account__info-right-btn save-btn" disabled>Save</button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="persona-account__tab-content-password">
+        <form class="persona-account__password">
+          <div class="persona-account__password-inner">
+            <div class="persona-account__password-box">
+              <h5 class="persona-account__tab-title">Change password</h5>
+              
+              <div class="persona-account__password-group">
+                <div class="group-field group-field-password">
+                  <h3 class="group-field__title">Current password</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input group-field__input-password" type="password" name="password">
+                      <button class="group-field__btn-show-hide"></button>  <!-- group-field__btn-show-hide--active -->
+                      <a class="restore-password" href="#">Forgot your password?</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="persona-account__password-group">
+                <div class="group-field group-field-password">
+                  <h3 class="group-field__title">New password</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input group-field__input-password" type="password" name="password">
+                      <button class="group-field__btn-show-hide"></button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="persona-account__password-group">
+                <div class="group-field group-field-password">
+                  <h3 class="group-field__title">Confirm new password</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input group-field__input-password" type="password" name="password">
+                      <button class="group-field__btn-show-hide"></button>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="save-btn" disabled>Change password</button>
+              
+            </div>
+            
+            <div class="persona-account__password-info">
+              <div class="persona-account__password-info-box">
+                <h6 class="persona-account__password-info-title">Rules for password</h6>
+                <ul class="persona-account__password-info-list">
+                  <li class="persona-account__password-info-item--active">Minimum 8 characters</li>
+                  <li>At least one special character</li>
+                  <li>At least one number</li>
+                  <li>Must differ from any previous ones</li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+        </form>
+      </div>
+        
+      
+      
+    </div>
+  </div>
+  
+</div>
+</section>
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>

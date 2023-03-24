@@ -39,7 +39,6 @@ const dropDown = () => {
 
         // Клик снаружи дропдауна. Закрыть дропдаун
         document.addEventListener('click', function (e) {
-            console.log(e.target)
             if (e.target !== dropDownBtn && e.target !== dropDownSearch) {
                 dropDownBtn.classList.remove('dropdown__button--active');
                 dropDownList.classList.remove('dropdown__list--visible');

@@ -17,11 +17,18 @@
 @import 'pages/candidate-vacancy.scss';
 @import 'pages/after-registration';
 @import 'pages/create-vacancy';
+@import 'pages/policy';
+@import 'pages/persona-account';
+@import 'pages/contact-team';
+
+// 
+@import '../../node_modules/nouislider/dist/nouislider';
 
 .title {
     font-size: 40px;
     font-weight: 700;
 }
+
 
 .page__links {
     padding: 40px 0;
@@ -403,8 +410,23 @@
 
 .save-btn {
     @include greenbtn;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    &:disabled {
+        background-color: #D2EED7;
+        pointer-events: none;
+    }
+}
+.activate-btn {
+    @include greenbtn;
 }
 
+.border-green-btn {
+    @include borderGreenbtn;
+}
 
 .widget {
     &__toggle {
@@ -462,9 +484,45 @@
 // Select с Dropdown на js
 
 
-.lol {
-    margin: 50px 0;
+.help-question {
+    position: relative;
+    margin-left: 10px;
+    z-index: 15;
+    &-icon {
+        color: #888B8F;
+        &:hover {
+            color: $linkActive;
+        }
+    }
+    &-list {
+        opacity: 0;
+        transition: linear .3s;
+        position: absolute;
+        width: 300px;
+        bottom: -230px;
+        right: -10px;
+        box-shadow: $bigBoxShadow;
+        background-color: $otherBackground;
+        border-radius: 8px;
+        padding: 8px 16px 8px 40px;
+        font-size: 14px;
+        line-height: 20px;
+        pointer-events: none;
+        li {
+            list-style: decimal;
+        }
+        p {
+            font-weight: 500;
+        }
+        span {
+            color: #3E3E3E;
+        }
+    }
 }
+.help-question-icon:hover ~ .help-question-list {
+    opacity: 1;
+}
+
 
 .dropdown {
     position: relative;
@@ -478,7 +536,7 @@
     background-color: $white;
     border: 1px solid $borderGray;
     border-radius: 8px;
-    height: 46px;
+    height: 48px;
     padding: 13px 35px 13px 16px;
     font-weight: 500;
     line-height: 20px;
@@ -510,7 +568,7 @@
     width: 100%;
     box-shadow: $smallBoxShadow;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     left: 0;
     top: 46px;
     max-height: 220px;
@@ -702,8 +760,9 @@
   .radio__real:checked + .radio__fake::before {
     position: absolute;
     content: '';
-    top: 3px;
-    left: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 14px;
     height: 14px;
     background-color: $linkActive;
@@ -711,27 +770,236 @@
   }
 
 
-.delete-btn {
-    width: 127px;
-    height: 48px;
-    border: 1px solid $linkActive;
-    border-radius: 8px;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #3e3e3e;
+
+
+.remove-btn {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/remove-btn.svg);
+    background-repeat: no-repeat;
     &:hover {
-        background-color: $otherBackground;
-        border: 1px solid $hoverGreen;
-    }
-    &:disabled {
-        @include disabledBtn;
+        transform: scale(1.1);
     }
 }
 
+.change-btn {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/change-btn-icon.svg);
+    background-repeat: no-repeat;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+
+
+.just-validate-error-field {
+    border: 1px solid #F91F43;
+    &:focus {
+        border: 1px solid #F91F43;
+    }
+}
+
+.just-validate-error-label {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #F91F43;
+}
+
+.green-timer {
+    color: $linkActive;
+    font-size: 14px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    &::after {
+        @include afterTopAbsolute;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../images/icons/clock-green-icon.svg');
+    }
+}
+
+.time-counter-test {
+    display: inline-block;
+    padding: 8px 8px 8px 37px;
+    background-color: $otherBackground;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    position: relative;
+    // width: 130px;
+    &::after {
+        @include afterTopAbsolute;
+        left: 8px;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/timer-skill.svg');
+    }
+}
+
+
+
+.group-field {
+    width: 100%;
+    &__title {
+        color: #3e3e3e;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    &__wrapper {
+        position: relative;
+    }
+    &__input {
+        border-radius: 8px;
+        border: 1px solid $borderGray;
+        width: 100%;
+        height: 48px;
+        padding: 12px 16px;
+        position: relative;
+        &:focus {
+            border: 1px solid $linkActive;
+        }
+    }
+    &__input-password {
+        padding-right: 45px;
+    }
+    &__textarea {
+        width: 100%;
+        height: 120px;
+        border: 1px solid $borderGray;
+        border-radius: 8px;
+        resize: none;
+        padding: 12px 16px;
+        &:focus {
+            border: 1px solid $linkActive;
+        }
+        &::-webkit-scrollbar {
+            width: 3px;
+            background-color: transparent;
+            border-radius: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #D3D3D3;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    }
+    &__symbols {
+        text-align: right;
+        color: #666;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    &__wrapper-date {
+        position: relative;
+        width: 100%;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 10px;
+            pointer-events: none;
+            left: 16px;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/calendar-2-date.svg);
+            z-index: 3;
+        }
+
+    }
+    &__wrapper-date--disable{
+        &::after {
+            background-image: url('../images/icons/calendar-2-date-disable.svg');
+        }
+    }
+    &__input-date {
+        padding-left: 48px;
+        &:disabled {
+            @include disabledBtn;
+        }
+    }
+    // password
+    &__btn-show-hide {
+        position: absolute;
+        right: 16px;
+        top: 12px;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-image: url('../images/icons/eye.svg');
+    }
+    &__btn-show-hide--active {
+        background-image: url('../images/icons/eye-slash.svg');
+    }
+}
+.group-field--width {
+    width: 270px;
+}
+.restore-password {
+    color: $linkActive;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 4px;
+    text-align: right;
+    &:hover {
+        color: $hoverGreen;
+    }
+}
+
+
+.upload {
+    &__title {
+        font-weight: 600;
+    }
+    &-wrapper {
+        display: flex;
+        margin-top: 10px;
+    }
+    &__img {
+        width: 112px;
+        height: 112px;
+        border: 1px dashed $borderGray;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        &::after {
+            @include afterTopAbsolute;
+            top: 50%;
+            left: 50%;
+            width: 39px;
+            height: 39px;
+            background-image: url('../images/icons/upload-img-icon.svg');
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        img {
+            object-fit: cover;
+            width: 112px;
+            height: 112px;
+        }
+    }
+    &__buttons {
+        margin-left: 16px;
+        width: 175px;
+    }
+}
+.upload-btn-input {
+    position: absolute;
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+    cursor: pointer;
+    top: -20px;
+    left: 0;
+}
 .upload-btn {
-    width: 127px;
+    width: 100%;
     height: 48px;
     border: 1px solid $linkActive;
     border-radius: 8px;
@@ -757,15 +1025,105 @@
         pointer-events: none;
     }
 }
+.delete-btn {
+    width: 100%;
+    height: 48px;
+    border: 1px solid $linkActive;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3e3e3e;
+    &:hover {
+        background-color: $otherBackground;
+        border: 1px solid $hoverGreen;
+    }
+    &:disabled {
+        @include disabledBtn;
+    }
+}
 
-.upload-btn-input {
-    position: absolute;
-    opacity: 0;
-    width: 200%;
-    height: 200%;
+
+
+
+
+.range-slider {
+    display:  flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__box {
+        width: 100%;
+    }
+    &__title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #3e3e3e;
+        margin-bottom: 15px;
+    }
+    &__wrapper {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        p {
+            margin-left: 8px;
+        }
+    }
+    &__input {
+        border: 1px solid $borderGray;
+        width: 64px;
+        padding: 18px 0;
+        pointer-events: none;
+        border-radius: 8px;
+        font-weight: 500;
+        color: #3E3E3E;
+        text-align: center;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            display: none;
+            -webkit-appearance: none;
+            margin: 0;
+            -moz-appearance: textfield;
+        }
+    }
+}
+
+
+
+
+.noUi-horizontal {
+    height: 4px;
+    border: none;
+    background-color: #D3D3D3;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+.noUi-handle {
+    border-radius: 50%;
+    background-color: #4EB8EE;
+    border: 1px solid $white;
     cursor: pointer;
-    top: -20px;
-    left: 0;
+    transition: linear .2s;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.2);
+    }
+    &::after,
+    &::before {
+        display: none;
+    }
+}
+  
+.noUi-horizontal .noUi-handle {
+    width: 32px;
+    height: 32px;
+    top: -14px;
+}
+
+.noUi-connect {
+    background-color: #4EB8EE;
 }
 
 
@@ -781,6 +1139,27 @@
 
 
 
+
+
+
+
+
+
+// удалить по завершению проекта
+
+.razdelitel {
+    margin: 50px;
+}
+
+.read-me {
+    .p {
+        margin: 50px 0;
+        font-size: 20px;
+        display: block;
+        padding: 10px;
+        background-color: $otherBackground;
+    }
+}
 
 
 

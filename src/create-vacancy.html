@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+@@include('html/header.html', {})
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs__inner">
+      <ul>
+        <li>
+          <a href="#">My vacancy</a>
+        </li>
+        <li class="breadcrumbs__link-active">
+          <a href="#">Create vacancy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+
+<main class="main">
+
+<section class="create-edit-vacancy create-edit-vacancy-business">
+<div class="container">
+  <h1 class="create-edit-vacancy__title title">Create vacancy</h1>
+  <form class="create-edit-vacancy__inner" id="create-vacancy">
+    <div class="create-edit-vacancy__left">
+      <ul class="create-edit-vacancy-progress">
+        <li class="create-edit-vacancy-progress-item create-edit-vacancy-progress-item--active">Company details</li>
+        <li class="create-edit-vacancy-progress-item">Vacancy details</li>
+        <li class="create-edit-vacancy-progress-item">Questions for video interview</li>
+        <li class="create-edit-vacancy-progress-item">Soft skills tests</li>
+      </ul>
+      
+      <div class="create-edit-vacancy__left-inner">
+        <div class="create-edit-vacancy__items">
+    
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">1. Company details</h2>
+            
+            
+            <div class="create-edit-vacancy__group">
+              <div class="group-field">
+                <h3 class="group-field__title">Company name</h3>
+                <div class="group-field__wrapper counter-wrapper">
+                  <input class="group-field__input counter-text" type="text" placeholder="Biffco Enterprises Ltd." name="" maxlength="55">
+                  <p class="create-edit-vacancy__symbols group-field__symbols">
+                    <span class="counter-num">0</span>/55 symbols
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="group-field">
+              <h3 class="group-field__title">Company description</h3>
+                <div class="group-field__wrapper counter-wrapper">
+                  <textarea class="group-field__textarea counter-text" name="company description" placeholder="Describe your Company" maxlength="2000"></textarea>
+                  <p class="create-edit-vacancy__symbols group-field__symbols">
+                    <span class="counter-num">0</span>/2000 symbols
+                  </p>
+                </div>
+            </div>
+            
+            
+          </div>
+          
+          <div class="create-edit-vacancy__item">
+            
+            <h2 class="create-edit-vacancy__item-title">2. Vacancy details</h2>
+            
+            <div class="create-edit-vacancy__group">
+              <div class="group-field">
+                <h3 class="group-field__title">Job title</h3>
+                <div class="group-field__wrapper">
+                    <input class="group-field__input counter-text" type="text" placeholder="e.g. Driver" name="job-title">
+                </div>
+              </div>
+            </div>
+          
+            
+            <div class="group-field">
+              <h3 class="group-field__title">Detailed description</h3>
+                <div class="group-field__wrapper counter-wrapper">
+                  <textarea class="group-field__textarea counter-text" name="detailed-description" placeholder="Describe your vacancy" maxlength="2000"></textarea>
+                  <p class="create-edit-vacancy__symbols group-field__symbols">
+                    <span class="counter-num">0</span>/2000 symbols
+                  </p>
+                </div>
+            </div>
+            
+            <div class="create-edit-vacancy__group">
+              <h3 class="create-edit-vacancy__group-title">Location of the vacancy</h3>
+              <div class="form-group">
+                <div class="dropdown">
+                  <div class="dropdown__button">Select country</div>
+                
+                  <ul class="dropdown__list">
+                    <div class="dropdown__list-wrapper">
+                      <input class="dropdown__list-search" type="search" placeholder="Search" name="search-country">
+                    </div>
+                    <li class="dropdown__list-item" data-value="russia">Russia</li>
+                    <li class="dropdown__list-item" data-value="USA">USA</li>
+                    <li class="dropdown__list-item" data-value="canada">Canada</li>
+                    <li class="dropdown__list-item" data-value="ukraine">Ukraine</li>
+                    <li class="dropdown__list-item" data-value="germany">Germany</li>
+                    <li class="dropdown__list-item" data-value="france">France</li>
+                    <li class="dropdown__list-item" data-value="australia">Australia</li>
+                  </ul>
+                  <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-edit-vacancy__group">
+              <div class="form-group">
+                <div class="dropdown">
+                  <div class="dropdown__button">Select city</div>
+                
+                  <ul class="dropdown__list">
+                    <div class="dropdown__list-wrapper">
+                      <input class="dropdown__list-search" type="search" placeholder="Search" name="search-city">
+                    </div>
+                    <li class="dropdown__list-item" data-value="russia">Город1</li>
+                    <li class="dropdown__list-item" data-value="USA">Город которого нет</li>
+                    <li class="dropdown__list-item" data-value="canada">Город61</li>
+                    <li class="dropdown__list-item" data-value="ukraine">Город11</li>
+                    <li class="dropdown__list-item" data-value="germany">Город3</li>
+                    <li class="dropdown__list-item" data-value="france">Город7</li>
+                    <li class="dropdown__list-item" data-value="australia">Город2</li>
+                  </ul>
+                  <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-edit-vacancy__group-checkbox create-edit-vacancy__group-checkbox-right">
+              <label class="checkbox">
+                <input class="checkbox__real" type="checkbox" name="salary" checked>
+                <span class="checkbox__fake"></span>
+                <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Remote</span>
+              </label>
+            </div>
+            
+            
+            <div class="create-edit-vacancy-flex create-edit-vacancy-flex--date">
+              <div class="create-edit-vacancy__group">
+                <div class="group-field group-field--width">
+                  <h3 class="group-field__title">Application deadline</h3>
+                  <div class="group-field__wrapper group-field__wrapper-date">
+                      <input class="group-field__input group-field__input-date" type="text" placeholder="DD.MM.YYYY" name="beginning-date">
+                  </div>
+                </div>
+              </div>
+              <div class="create-edit-vacancy__group">
+                <div class="group-field group-field--width">
+                  <h3 class="group-field__title">Closing deadline</h3>
+                  <div class="group-field__wrapper group-field__wrapper-date">
+                      <input class="group-field__input group-field__input-date" type="text" placeholder="DD.MM.YYYY" name="end-date">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">Salary</h2>
+            
+            
+            <div class="create-edit-vacancy-flex">
+              
+              <div class="create-edit-vacancy__group salary-fixed">
+                <div class="group-field">
+                  <h3 class="group-field__title">Amount</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input" type="text" placeholder="1,000" name="amount-salary">
+                  </div>
+                </div>
+              </div>
+            
+              <div class="create-edit-vacancy__group create-edit-vacancy__group-salary salary-hide">
+                <div class="group-field">
+                  <h3 class="group-field__title">From</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input" type="text" placeholder="1,000" name="from-salary">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="create-edit-vacancy__group create-edit-vacancy__group-salary salary-hide">
+                <div class="group-field">
+                  <h3 class="group-field__title">To</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input" type="text" placeholder="1,000" name="to-salary">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="create-edit-vacancy__group create-edit-vacancy__group-salary">
+                <h3 class="create-edit-vacancy__group-title">Currency</h3>
+                <div class="form-group">
+                  <div class="dropdown">
+                    <div class="dropdown__button">USD</div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item" data-value="russia">Russia</li>
+                      <li class="dropdown__list-item" data-value="USA">USA</li>
+                      <li class="dropdown__list-item" data-value="canada">Canada</li>
+                      <li class="dropdown__list-item" data-value="ukraine">Ukraine</li>
+                      <li class="dropdown__list-item" data-value="germany">Germany</li>
+                      <li class="dropdown__list-item" data-value="france">France</li>
+                      <li class="dropdown__list-item" data-value="australia">Australia</li>
+                    </ul>
+                    <input class="dropdown__input-hidden" type="text" name="select-category" value="salary">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+            
+            <div class="create-edit-vacancy__group">
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                
+                <div class="create-edit-vacancy__group-checkbox salary-fixed-radio">
+                  <label class="radio">
+                    <input class="radio__real" type="radio" name="salary">
+                    <span class="radio__fake"></span>
+                    <span class="create-edit-vacancy__group-checkbox-text radio__title">Don’t show salary</span>
+                  </label>
+                </div>
+                
+                <div class="create-edit-vacancy__group-checkbox">
+                  <label class="radio">
+                    <input class="radio__real" type="radio" name="salary">
+                    <span class="radio__fake"></span>
+                    <span class="create-edit-vacancy__group-checkbox-text radio__title">Per month</span>
+                  </label>
+                </div>
+                
+                <div class="create-edit-vacancy__group-checkbox">
+                  <label class="radio">
+                    <input class="radio__real" type="radio" name="salary" checked>
+                    <span class="radio__fake"></span>
+                    <span class="create-edit-vacancy__group-checkbox-text radio__title">Per year</span>
+                  </label>
+                </div>
+                
+                <label class="checkbox salary-hide">
+                  <input class="checkbox__real" type="checkbox" name="salary">
+                  <span class="checkbox__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Don’t show salary</span>
+                </label>
+              </div>
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="checkbox">
+                  <input class="checkbox__real fixed-input" type="checkbox" name="salary">
+                  <span class="checkbox__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Fixed</span>
+                </label>
+              </div>
+              
+            </div>
+              
+          </div>
+            
+          <div class="create-edit-vacancy__item">
+            <div class="create-edit-vacancy__item-wrapper">
+              <h2 class="create-edit-vacancy__item-title">3. Questions for video interview</h2>
+              <p class="time-counter-test">Max <span> 15 </span> min</p>
+            </div>
+                    
+            <div class="create-edit-vacancy__item-questions">
+              
+              <div class="create-edit-vacancy__item-questions-wrapper">
+                <h4 class="create-edit-vacancy__item-questions-title">Enter your question or create a list of questions</h4>
+                  <div class="help-question">
+                    <div class="help-question-icon">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M7.98014 15.1693C4.03348 15.1693 0.813477 11.9559 0.813477 8.0026C0.813477 4.04927 4.03348 0.835938 7.98014 0.835938C11.9268 0.835938 15.1468 4.04927 15.1468 8.0026C15.1468 11.9559 11.9335 15.1693 7.98014 15.1693ZM7.98014 1.83594C4.58014 1.83594 1.81348 4.6026 1.81348 8.0026C1.81348 11.4026 4.58014 14.1693 7.98014 14.1693C11.3801 14.1693 14.1468 11.4026 14.1468 8.0026C14.1468 4.6026 11.3801 1.83594 7.98014 1.83594Z" fill="currentColor"/>
+                        <path d="M7.33333 9.76539H8.41667V9.69342C8.43182 8.82221 8.68182 8.43205 9.32576 8.03433C10.0038 7.62524 10.4205 7.04948 10.4205 6.19721C10.4205 4.96615 9.48864 4.13281 8.09848 4.13281C6.82197 4.13281 5.79924 4.87902 5.75 6.24266H6.90152C6.94697 5.43963 7.51894 5.08736 8.09848 5.08736C8.74242 5.08736 9.26515 5.51539 9.26515 6.18584C9.26515 6.75024 8.91288 7.14796 8.46212 7.42827C7.75758 7.86009 7.34091 8.28812 7.33333 9.69342V9.76539ZM7.9053 12.0684C8.31818 12.0684 8.66288 11.7313 8.66288 11.3108C8.66288 10.898 8.31818 10.5571 7.9053 10.5571C7.48864 10.5571 7.14773 10.898 7.14773 11.3108C7.14773 11.7313 7.48864 12.0684 7.9053 12.0684Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <ul class="help-question-list">
+                      <li>
+                        <p>Fill out your profile.</p>
+                        <span>Employers see only complete profiles.</span>
+                      </li>
+                      <li>
+                        <p>Record a short video about yourself.</p>
+                        <span>Candidates with recorded videos are invited to interviews more often.</span>
+                      </li>
+                      <li>
+                        <p>Publish your profile to get hired.</p>
+                        <span>Public profile and video are visible to all companies registered on CallPanda.com.</span>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+              
+              <div class="create-edit-vacancy__item-questions-wrapper">
+                
+                <div class="group-field">
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input" type="text" placeholder="Create new question" name="questions">
+                  </div>
+                </div>
+                
+                <button class="create-edit-vacancy__item-questions-add-btn">Add</button>
+              </div>
+              <ul class="create-edit-vacancy__item-questions-list">
+                <li>
+                  <div class="create-edit-vacancy__item-questions-list-item">
+                    <p>If you were a CFO of our company, what would keep you up at night?</p>
+                    <div class="create-edit-vacancy__item-questions-list-btns">
+                      <button class="change-btn"></button>
+                      <button class="remove-btn"></button>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="create-edit-vacancy__item-questions-list-item">
+                    <p>Why do you want to work for us?</p>
+                    <div class="create-edit-vacancy__item-questions-list-btns">
+                      <button class="change-btn"></button>
+                      <button class="remove-btn"></button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            
+            
+            
+          </div>
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">4. Soft skills tests</h2>
+            
+            <div class="choose-skills">
+              <div class="choose-skills__left">
+              
+                <div class="choose-skills-wrapper">
+                  <h4 class="choose-skills__title">Choose soft skills:</h4>
+                  <p class="choose-skills__info">from 3 to 7 skills are required</p>
+                </div>
+                <ul class="choose-skills__tags">
+                  <li class="choose-skills__tag">
+                    <p>Activity and engagement</p>
+                    <button></button>
+                  </li>
+                  <li class="choose-skills__tag">
+                    <p>Anxiety</p>
+                    <button></button>
+                  </li>
+                  <li class="choose-skills__tag">
+                    <p>Creativity</p>
+                    <button></button>
+                  </li>
+                  <li class="choose-skills__tag">
+                    <p>Reliability</p>
+                    <button></button>
+                  </li>
+                  <li class="choose-skills__tag">
+                    <p>Motivation to achieve</p>
+                    <button></button>
+                  </li>
+                  <li class="choose-skills__tag">
+                    <p>Time management</p>
+                    <button></button>
+                  </li>
+                  <li class="choose-skills__tag">
+                    <p>Responsibility</p>
+                    <button></button>
+                  </li>
+                </ul>
+                <div class="choose-skills__box">
+                    <input class="choose-skills__box-search" type="search" placeholder="Search" name="skills-search">
+                  <ul class="choose-skills__box-tags">
+                    <li> <button>Optimism</button></li>
+                    <li> <button>Reactive aggression</button></li>
+                    <li> <button>Resistance to stress</button></li>
+                    <li> <button>Spontaniety</button></li>
+                    <li> <button>Optimism</button></li>
+                    <li> <button>Spontaneous aggression</button></li>
+                    <li> <button>Motivation</button></li>
+                    <li> <button>Responsibility</button></li>
+                    <li> <button>Time management</button></li>
+                    <li> <button>Motivation to achieve</button></li>
+                    <li> <button>Reliability</button></li>
+                    <li> <button>Creativity</button></li>
+                    <li> <button>Anxiety</button></li>
+                    <li> <button>Activity and engagement</button></li>
+                  </ul>
+                </div>
+                
+                <div class="choose-skills__right">
+                  <h4 class="choose-skills__right-title">Optimal combination of soft skills</h4>
+                  <p class="choose-skills__right-subtitle">Please mark how important these qualities are for the vacancy</p>
+                  
+                  <ul class="choose-skills__right-sliders">
+                    <li>
+                      <div class="range-slider">
+                        <div class="range-slider__box">
+                          <h5 class="range-slider__title">Negotiation</h5>
+                          <div class="range-slider__line"></div>
+                        </div>
+                        <div class="range-slider__wrapper">
+                          <input class="range-slider__input" type="number" value="20" name="range-slider">
+                          <p>%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="range-slider">
+                        <div class="range-slider__box">
+                          <h5 class="range-slider__title">Anxiety</h5>
+                          <div class="range-slider__line"></div>
+                        </div>
+                        <div class="range-slider__wrapper">
+                          <input class="range-slider__input" type="number" value="50" name="range-slider">
+                          <p>%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="range-slider">
+                        <div class="range-slider__box">
+                          <h5 class="range-slider__title">Creativity</h5>
+                          <div class="range-slider__line"></div>
+                        </div>
+                        <div class="range-slider__wrapper">
+                          <input class="range-slider__input" type="number" value="50" name="range-slider">
+                          <p>%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="range-slider">
+                        <div class="range-slider__box">
+                          <h5 class="range-slider__title">Reliability</h5>
+                          <div class="range-slider__line"></div>
+                        </div>
+                        <div class="range-slider__wrapper">
+                          <input class="range-slider__input" type="number" value="50" name="range-slider">
+                          <p>%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="range-slider">
+                        <div class="range-slider__box">
+                          <h5 class="range-slider__title">Motivation to achieve</h5>
+                          <div class="range-slider__line"></div>
+                        </div>
+                        <div class="range-slider__wrapper">
+                          <input class="range-slider__input" type="number" value="50" name="range-slider">
+                          <p>%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="range-slider">
+                        <div class="range-slider__box">
+                          <h5 class="range-slider__title">Time management</h5>
+                          <div class="range-slider__line"></div>
+                        </div>
+                        <div class="range-slider__wrapper">
+                          <input class="range-slider__input" type="number" value="50" name="range-slider">
+                          <p>%</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="range-slider">
+                        <div class="range-slider__box">
+                          <h5 class="range-slider__title">Responsibility</h5>
+                          <div class="range-slider__line"></div>
+                        </div>
+                        <div class="range-slider__wrapper">
+                          <input class="range-slider__input" type="number" value="50" name="range-slider">
+                          <p>%</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="choose-skills-wrapper">
+                  <div class="choose-skills-wrapper-group">
+                    <h4 class="choose-skills__title">Tests</h4>
+                      <div class="help-question">
+                        <div class="help-question-icon">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M7.98014 15.1693C4.03348 15.1693 0.813477 11.9559 0.813477 8.0026C0.813477 4.04927 4.03348 0.835938 7.98014 0.835938C11.9268 0.835938 15.1468 4.04927 15.1468 8.0026C15.1468 11.9559 11.9335 15.1693 7.98014 15.1693ZM7.98014 1.83594C4.58014 1.83594 1.81348 4.6026 1.81348 8.0026C1.81348 11.4026 4.58014 14.1693 7.98014 14.1693C11.3801 14.1693 14.1468 11.4026 14.1468 8.0026C14.1468 4.6026 11.3801 1.83594 7.98014 1.83594Z" fill="currentColor"/>
+                            <path d="M7.33333 9.76539H8.41667V9.69342C8.43182 8.82221 8.68182 8.43205 9.32576 8.03433C10.0038 7.62524 10.4205 7.04948 10.4205 6.19721C10.4205 4.96615 9.48864 4.13281 8.09848 4.13281C6.82197 4.13281 5.79924 4.87902 5.75 6.24266H6.90152C6.94697 5.43963 7.51894 5.08736 8.09848 5.08736C8.74242 5.08736 9.26515 5.51539 9.26515 6.18584C9.26515 6.75024 8.91288 7.14796 8.46212 7.42827C7.75758 7.86009 7.34091 8.28812 7.33333 9.69342V9.76539ZM7.9053 12.0684C8.31818 12.0684 8.66288 11.7313 8.66288 11.3108C8.66288 10.898 8.31818 10.5571 7.9053 10.5571C7.48864 10.5571 7.14773 10.898 7.14773 11.3108C7.14773 11.7313 7.48864 12.0684 7.9053 12.0684Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <ul class="help-question-list">
+                          <li>
+                            <p>Fill out your profile.</p>
+                            <span>Employers see only complete profiles.</span>
+                          </li>
+                          <li>
+                            <p>Record a short video about yourself.</p>
+                            <span>Candidates with recorded videos are invited to interviews more often.</span>
+                          </li>
+                          <li>
+                            <p>Publish your profile to get hired.</p>
+                            <span>Public profile and video are visible to all companies registered on CallPanda.com.</span>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                  <p class="time-counter-test">Max <span>65</span> min</p>
+                </div>
+                
+                <div class="choose-skills__cards">
+                  
+                  <a class="skill-test-mini-card"  href="#">
+                    <h3 class="skill-test-mini-card__title">Critical Test</h3>
+                    <div class="skill-test-mini-card__content">
+                      <div class="skill-test-mini-card__questions">
+                        <div class="skill-test-mini-card__questions-num">
+                          16
+                        </div>
+                        <p>questions</p>
+                      </div>
+                      <div class="skill-test-mini-card__complete">
+                        <div class="green-timer">
+                          <span class="green-timer-num">8</span> min
+                        </div>
+                        <p>to complete</p>
+                      </div>
+                    </div>
+                  </a>
+                  
+                  <a class="skill-test-mini-card"  href="#">
+                    <h3 class="skill-test-mini-card__title">Leadership Test</h3>
+                    <div class="skill-test-mini-card__content">
+                      <div class="skill-test-mini-card__questions">
+                        <div class="skill-test-mini-card__questions-num">
+                          22
+                        </div>
+                        <p>questions</p>
+                      </div>
+                      <div class="skill-test-mini-card__complete">
+                        <div class="green-timer">
+                          <span class="green-timer-num">12</span> min
+                        </div>
+                        <p>to complete</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                
+              </div>
+              
+          </div>
+          </div>
+        </div>
+        
+        
+        <div class="create-edit-vacancy__upload upload">
+          <div class="upload">
+            <p class="upload__title">Logo</p>
+            <div class="upload-wrapper">
+              <div class="upload__img">
+                <!-- Просто раскоментировать изображение и оно станет как нужно -->
+                <!-- <img src="images/content/card/card-photo-2.jpg" alt=""> -->
+              </div>
+              <div class="upload__buttons">
+                <div class="upload-btn">
+                  Upload
+                  <input class="upload-btn-input upload__input" type="file" name="upload">
+                </div>
+                
+                <button class="delete-btn" disabled>Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="create-edit-vacancy__right">
+      <div class="create-edit-vacancy__right-content">
+        <div class="create-edit-vacancy__right-content-btns">
+          <button class="create-edit-vacancy__right-btn border-green-btn" type="submit">Save to Draft</button>
+          <button class="create-edit-vacancy__right-btn activate-btn" type="submit">Activate</button>
+          
+        </div>
+        <div class="profile-completeness">
+          <div class="profile-completeness__box">
+            <div class="green-timer">
+              <span class="green-timer-num">8</span> min
+            </div>
+          </div>
+          <div class="profile-completeness__line-bottom"></div>
+          <div class="profile-completeness__line-top profile-completeness__line-top--active" style="width: 34%;"></div>
+          <p class="profile-completeness__subtext">Total time to complete tests and video interview</p>
+        
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</section>
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>

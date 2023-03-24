@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+@@include('html/header.html', {})
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs__inner">
+      <ul>
+        <li>
+          <a href="#">My profile</a>
+        </li>
+        <li class="breadcrumbs__link-active">
+          <a href="#">Edit</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+
+<main class="main">
+
+<section class="create-edit-vacancy">
+<div class="container">
+  <h1 class="create-edit-vacancy__title title">Edit profile</h1>
+  <form class="create-edit-vacancy__inner" id="validator_form">
+    <div class="create-edit-vacancy__left">
+      
+      <div class="create-edit-vacancy__left-inner">
+        <div class="create-edit-vacancy__items">
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">Contact Details</h2>
+            <a class="persona__mail" href="#">ralfnames@example.com</a>
+              <h3 class="create-edit-vacancy__group-title">Mobile number</h3>
+              <div class="input-phone-wrapper">
+                <div class="form-group">
+                  <div class="dropdown dropdown-flag">
+                    <div class="dropdown__button">
+                      <img src="images/icons/flag-1.svg" alt="russia-flag">
+                    </div>
+                  
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item" data-value="russia">
+                        <div class="dropdown__list-item-box">
+                          <img src="images/icons/flad-russia-icon.svg" alt="russia-flag">
+                          <h3>Russia</h3>
+                        </div>
+                        <p>AD +7</p>
+                      </li>
+                      <li class="dropdown__list-item" data-value="usa">
+                        <div class="dropdown__list-item-box">
+                          <img src="images/icons/flag-1.svg" alt="usa-flag">
+                          <h3>Usa</h3>
+                        </div>
+                        <p>AD +985</p>
+                      </li>
+                      <li class="dropdown__list-item" data-value="usa">
+                        <div class="dropdown__list-item-box">
+                          <img src="images/icons/flag-2.svg" alt="usa-flag">
+                          <h3>Avstria</h3>
+                        </div>
+                        <p>AD +791</p>
+                      </li>
+                      <li class="dropdown__list-item" data-value="usa">
+                        <div class="dropdown__list-item-box">
+                          <img src="images/icons/flag-3.svg" alt="usa-flag">
+                          <h3>Canada</h3>
+                        </div>
+                        <p>AD +745</p>
+                      </li>
+                      <li class="dropdown__list-item" data-value="usa">
+                        <div class="dropdown__list-item-box">
+                          <img src="images/icons/flag-4.svg" alt="usa-flag">
+                          <h3>Strana</h3>
+                        </div>
+                        <p>AD +11</p>
+                      </li>
+                    </ul>
+                    <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                  </div>
+                </div>
+                <input class="input-phone" type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _" value="" name="phone">
+              </div>
+              
+          </div>
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">Personal details</h2>
+            
+            <div class="create-edit-vacancy__group">
+              <div class="group-field">
+                <h3 class="group-field__title">First name *</h3>
+                <div class="group-field__wrapper">
+                    <input class="group-field__input" type="text" placeholder="John" name="name">
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-edit-vacancy__group">
+              <div class="group-field">
+                <h3 class="group-field__title">Last name *</h3>
+                <div class="group-field__wrapper">
+                    <input class="group-field__input" type="text" placeholder="Smith" name="last-name">
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-edit-vacancy-flex">
+              <div class="create-edit-vacancy__group">
+                <div class="group-field group-field--width">
+                  <h3 class="group-field__title">Date of birth *</h3>
+                  <div class="group-field__wrapper group-field__wrapper-date">
+                      <input class="group-field__input group-field__input-date" type="text" placeholder="DD.MM.YYYY" name="date-birth">
+                  </div>
+                </div>
+              </div>
+              <div class="create-edit-vacancy__box-width">
+                <div class="create-edit-vacancy__group">
+                  <h3 class="create-edit-vacancy__group-title">Nationality (citizenship)</h3>
+                  <div class="form-group">
+                    <div class="dropdown">
+                      <div class="dropdown__button">Select</div>
+                      <ul class="dropdown__list">
+                        <div class="dropdown__list-wrapper">
+                          <input class="dropdown__list-search" type="search" placeholder="Search" name="search">
+                        </div>
+                        <li class="dropdown__list-item" data-value="russia">Russia</li>
+                        <li class="dropdown__list-item" data-value="USA">USA</li>
+                        <li class="dropdown__list-item" data-value="canada">Canada</li>
+                        <li class="dropdown__list-item" data-value="ukraine">Ukraine</li>
+                        <li class="dropdown__list-item" data-value="germany">Germany</li>
+                        <li class="dropdown__list-item" data-value="france">France</li>
+                        <li class="dropdown__list-item" data-value="australia">Australia</li>
+                      </ul>
+                      <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-edit-vacancy__group">
+              <h3 class="create-edit-vacancy__group-title">Gender</h3>
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="radio">
+                  <input class="radio__real" type="radio" name="gender">
+                  <span class="radio__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text radio__title">Male</span>
+                </label>
+              </div>
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="radio">
+                  <input class="radio__real" type="radio" name="gender">
+                  <span class="radio__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text radio__title">Female</span>
+                </label>
+              </div>
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="radio">
+                  <input class="radio__real" type="radio" name="gender">
+                  <span class="radio__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text radio__title">I choose not to answer</span>
+                </label>
+              </div>
+              
+              
+              
+              
+            </div>
+            
+            <div class="create-edit-vacancy__group">
+              <h3 class="create-edit-vacancy__group-title">Residence</h3>
+              <div class="form-group">
+                <div class="dropdown">
+                  <div class="dropdown__button">Select country</div>
+                
+                  <ul class="dropdown__list">
+                    <div class="dropdown__list-wrapper">
+                      <input class="dropdown__list-search" type="search" placeholder="Search" name="search">
+                    </div>
+                    <li class="dropdown__list-item" data-value="russia">Russia</li>
+                    <li class="dropdown__list-item" data-value="USA">USA</li>
+                    <li class="dropdown__list-item" data-value="canada">Canada</li>
+                    <li class="dropdown__list-item" data-value="ukraine">Ukraine</li>
+                    <li class="dropdown__list-item" data-value="germany">Germany</li>
+                    <li class="dropdown__list-item" data-value="france">France</li>
+                    <li class="dropdown__list-item" data-value="australia">Australia</li>
+                  </ul>
+                  <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">What job are you looking for?</h2>
+            <div class="create-edit-vacancy__group">
+              <div class="group-field">
+                <h3 class="group-field__title">Job title *</h3>
+                <div class="group-field__wrapper">
+                    <input class="group-field__input" type="text" placeholder="e.g. Driver" name="job-title">
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-edit-vacancy__group">
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="checkbox">
+                  <input class="checkbox__real" type="checkbox" name="job-title">
+                  <span class="checkbox__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Can work remotely</span>
+                </label>
+              </div>
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="checkbox">
+                  <input class="checkbox__real" type="checkbox" name="job-title">
+                  <span class="checkbox__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Willing to relocate</span>
+                </label>
+              </div>
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="checkbox">
+                  <input class="checkbox__real" type="checkbox" name="job-title">
+                  <span class="checkbox__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Ready to go on business trips</span>
+                </label>
+              </div>
+              
+            </div>
+          </div>
+          
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">Target salary</h2>
+            <div class="create-edit-vacancy__group">
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="checkbox">
+                  <input class="checkbox__real" type="checkbox" name="salary">
+                  <span class="checkbox__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Don’t show salary</span>
+                </label>
+              </div>
+              
+              <div class="create-edit-vacancy__group-checkbox">
+                <label class="checkbox">
+                  <input class="checkbox__real" type="checkbox" name="salary">
+                  <span class="checkbox__fake"></span>
+                  <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Fixed</span>
+                </label>
+              </div>
+              
+            </div>
+            
+            
+            <div class="create-edit-vacancy-flex">
+              
+              <div class="create-edit-vacancy-flex-salary">
+                <div class="create-edit-vacancy__group create-edit-vacancy__group-salary">
+                  <div class="group-field">
+                    <h3 class="group-field__title">From</h3>
+                    <div class="group-field__wrapper">
+                        <input class="group-field__input" type="text" placeholder="1,000" name="from-salary">
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="create-edit-vacancy__group create-edit-vacancy__group-salary">
+                  <div class="group-field">
+                    <h3 class="group-field__title">To</h3>
+                    <div class="group-field__wrapper">
+                        <input class="group-field__input" type="text" placeholder="1,000" name="to-salary">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="create-edit-vacancy__group create-edit-vacancy__group-salary">
+                <h3 class="create-edit-vacancy__group-title">Currency</h3>
+                <div class="form-group">
+                  <div class="dropdown">
+                    <div class="dropdown__button">USD</div>
+                    <ul class="dropdown__list">
+                      <li class="dropdown__list-item" data-value="russia">Russia</li>
+                      <li class="dropdown__list-item" data-value="USA">USA</li>
+                      <li class="dropdown__list-item" data-value="canada">Canada</li>
+                      <li class="dropdown__list-item" data-value="ukraine">Ukraine</li>
+                      <li class="dropdown__list-item" data-value="germany">Germany</li>
+                      <li class="dropdown__list-item" data-value="france">France</li>
+                      <li class="dropdown__list-item" data-value="australia">Australia</li>
+                    </ul>
+                    <input class="dropdown__input-hidden" type="text" name="select-category" value="salary">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-edit-vacancy__group-checkbox">
+              <label class="radio">
+                <input class="radio__real" type="radio" name="salary">
+                <span class="radio__fake"></span>
+                <span class="create-edit-vacancy__group-checkbox-text radio__title">Per month</span>
+              </label>
+            </div>
+            
+            <div class="create-edit-vacancy__group-checkbox">
+              <label class="radio">
+                <input class="radio__real" type="radio" name="salary">
+                <span class="radio__fake"></span>
+                <span class="create-edit-vacancy__group-checkbox-text radio__title">Per year</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">About myself</h2>
+            <div class="group-field">
+                <div class="group-field__wrapper counter-wrapper">
+                  <textarea class="group-field__textarea counter-text" name="achievements" placeholder="You can briefly describe your experience and achievements." maxlength="1000"></textarea>
+                  <p class="create-edit-vacancy__symbols group-field__symbols">
+                    <span class="counter-num">0</span>/2000 symbols
+                  </p>
+                </div>
+            </div>
+          </div>
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">Education</h2>
+            <p class="create-edit-vacancy__item-text">Start with most recent</p>
+            
+            <div class="create-edit-vacancy__item-hidden">
+              <div class="create-edit-vacancy__item-hidden-remove-wrapper">
+                <button class="remove-btn"></button>
+              </div>
+              <div class="create-edit-vacancy__group">
+                <div class="group-field">
+                  <h3 class="group-field__title">University or School *</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input" type="text" name="education">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="create-edit-vacancy-flex">
+                <div class="create-edit-vacancy__group group-field--width">
+                  <div class="group-field">
+                    <h3 class="group-field__title">Degree</h3>
+                    <div class="group-field__wrapper">
+                        <input class="group-field__input" type="text" name="degree">
+                    </div>
+                  </div>
+                </div>
+                <div class="create-edit-vacancy__group group-field--width">
+                  <div class="group-field">
+                    <h3 class="group-field__title">Department or Major</h3>
+                    <div class="group-field__wrapper">
+                        <input class="group-field__input" type="text" name="department">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="create-edit-vacancy-flex create-edit-vacancy-flex--date">
+                <div class="create-edit-vacancy__group">
+                  <div class="group-field group-field--width">
+                    <h3 class="group-field__title">Beginning date *</h3>
+                    <div class="group-field__wrapper group-field__wrapper-date">
+                        <input class="group-field__input group-field__input-date" type="text" placeholder="YYYY" name="beginning-date">
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="create-edit-vacancy-box">
+                  <div class="group-field group-field--width">
+                    <h3 class="group-field__title">End date</h3>
+                    <div class="group-field__wrapper group-field__wrapper-date">
+                        <input class="group-field__input group-field__input-date" type="text" placeholder="YYYY" name="end-date">
+                    </div>
+                  </div>
+                  <div class="create-edit-vacancy__group-checkbox create-edit-vacancy__group-checkbox-right">
+                    <label class="checkbox">
+                      <input class="checkbox__real" type="checkbox" name="salary" checked>
+                      <span class="checkbox__fake"></span>
+                      <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Till present</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              
+            </div>
+            
+            <button class="create-edit-vacancy__item-add-btn">Add education</button>
+            
+          </div>
+          
+          <div class="create-edit-vacancy__item">
+            <h2 class="create-edit-vacancy__item-title">Work experience</h2>
+            <p class="create-edit-vacancy__item-text">Start with most recent</p>
+            
+            <div class="create-edit-vacancy__item-hidden">
+              <div class="create-edit-vacancy__item-hidden-remove-wrapper">
+                <button class="remove-btn"></button>
+              </div>
+              <div class="create-edit-vacancy__group">
+                <div class="group-field">
+                  <h3 class="group-field__title">Job title *</h3>
+                  <div class="group-field__wrapper">
+                      <input class="group-field__input" type="text" name="job-title">
+                  </div>
+                </div>
+              
+              </div>
+              
+              <div class="create-edit-vacancy-flex">
+                <div class="create-edit-vacancy__group">
+                  
+                  <div class="group-field group-field--width">
+                    <h3 class="group-field__title">Company name</h3>
+                    <div class="group-field__wrapper">
+                        <input class="group-field__input" type="text" name="company-name">
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="create-edit-vacancy__group">
+                  
+                  <div class="group-field group-field--width">
+                    <h3 class="group-field__title">Department or Major</h3>
+                    <div class="group-field__wrapper">
+                        <input class="group-field__input" type="text" name="department">
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <div class="create-edit-vacancy__group">
+                <h3 class="create-edit-vacancy__group-title">Employment type</h3>
+                <div class="form-group">
+                  <div class="dropdown">
+                    <div class="dropdown__button">Part-time</div>
+                  
+                    <ul class="dropdown__list">
+                      <div class="dropdown__list-wrapper">
+                        <input class="dropdown__list-search" type="search" placeholder="Search" name="search">
+                      </div>
+                      <li class="dropdown__list-item" data-value="russia">Russia</li>
+                      <li class="dropdown__list-item" data-value="USA">USA</li>
+                      <li class="dropdown__list-item" data-value="canada">Canada</li>
+                      <li class="dropdown__list-item" data-value="ukraine">Ukraine</li>
+                      <li class="dropdown__list-item" data-value="germany">Germany</li>
+                      <li class="dropdown__list-item" data-value="france">France</li>
+                      <li class="dropdown__list-item" data-value="australia">Australia</li>
+                    </ul>
+                    <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="create-edit-vacancy__item">
+                <h2 class="create-edit-vacancy__item-title">Job description</h2>
+                <div class="group-field">
+                  <div class="group-field__wrapper counter-wrapper">
+                    <textarea class="group-field__textarea counter-text" name="job-description" maxlength="1000"></textarea>
+                    <p class="create-edit-vacancy__symbols group-field__symbols">
+                      <span class="counter-num">0</span>/1000 symbols
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="create-edit-vacancy-flex">
+                <div class="create-edit-vacancy__group group-field--width">
+                  <div class="group-field">
+                    <h3 class="group-field__title">Beginning date *</h3>
+                    <div class="group-field__wrapper group-field__wrapper-date">
+                        <input class="group-field__input group-field__input-date" type="text" placeholder="YYYY" name="beginning-date">
+                    </div>
+                  </div>
+                </div>
+                <div class="create-edit-vacancy__group group-field--width">
+                  <div class="group-field">
+                    <h3 class="group-field__title">End date</h3>
+                    <div class="group-field__wrapper group-field__wrapper-date">
+                        <input class="group-field__input group-field__input-date" type="text" placeholder="YYYY" name="end-date">
+                    </div>
+                  </div>
+                  
+                  <div class="create-edit-vacancy__group-checkbox create-edit-vacancy__group-checkbox-right">
+                    <label class="checkbox">
+                      <input class="checkbox__real" type="checkbox" name="salary">
+                      <span class="checkbox__fake"></span>
+                      <span class="create-edit-vacancy__group-checkbox-text checkbox__title">Till present</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+            <button class="create-edit-vacancy__item-add-btn">Add work experience</button>
+            
+          </div>
+          
+        </div>
+        
+        <div class="create-edit-vacancy__upload">
+          <div class="upload">
+            <p class="upload__title">Logo</p>
+            <div class="upload-wrapper">
+              <div class="upload__img">
+                <!-- Просто раскоментировать изображение и оно станет как нужно -->
+                <!-- <img src="images/content/card/card-photo-2.jpg" alt=""> -->
+              </div>
+              <div class="upload__buttons">
+                <div class="upload-btn">
+                  Upload
+                  <input class="upload-btn-input upload__input" type="file" name="upload">
+                </div>
+                
+                <button class="delete-btn" disabled>Delete</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="create-edit-vacancy__right">
+      <div class="create-edit-vacancy__right-content">
+        <button class="create-edit-vacancy__right-btn save-btn" type="submit">Save</button>
+        <div class="profile-completeness">
+          <div class="profile-completeness__box">
+            <p class="profile-completeness__text">Profile completeness</p>
+            <span class="profile-completeness__num profile-completeness__num--active">100%</span>
+          </div>
+          <div class="profile-completeness__line-bottom"></div>
+          <div class="profile-completeness__line-top profile-completeness__line-top--active" style="width: 100%;"></div>
+          <p class="profile-completeness__subtext">The more information you provide, the more attractive will your profile be to potential employers.</p>
+          <ul class="profile-completeness__list">
+            <li class="profile-completeness__list-item profile-completeness__list-item--active">
+              <p class="profile-completeness__list-nums">+20%</p>
+              <p class="profile-completeness__list-text">Add photo</p>
+            </li>
+            <li class="profile-completeness__list-item">
+              <p class="profile-completeness__list-nums">+10%</p>
+              <p class="profile-completeness__list-text">Add nationality</p>
+            </li>
+            <li class="profile-completeness__list-item">
+              <p class="profile-completeness__list-nums">+10%</p>
+              <p class="profile-completeness__list-text">Choose gender</p>
+            </li>
+            <li class="profile-completeness__list-item">
+              <p class="profile-completeness__list-nums">+10%</p>
+              <p class="profile-completeness__list-text">Add residence</p>
+            </li>
+            <li class="profile-completeness__list-item">
+              <p class="profile-completeness__list-nums">+10%</p>
+              <p class="profile-completeness__list-text">Add target salary</p>
+            </li>
+            <li class="profile-completeness__list-item">
+              <p class="profile-completeness__list-nums">+10%</p>
+              <p class="profile-completeness__list-text">Add about myself</p>
+            </li>
+            <li class="profile-completeness__list-item">
+              <p class="profile-completeness__list-nums">+10%</p>
+              <p class="profile-completeness__list-text">Add education</p>
+            </li>
+            <li class="profile-completeness__list-item">
+              <p class="profile-completeness__list-nums">+10%</p>
+              <p class="profile-completeness__list-text">Add work experience</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>

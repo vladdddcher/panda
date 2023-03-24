@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+@@include('html/header.html', {})
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+
+
+
+<main class="main">
+
+<section class="contact-team">
+<div class="container">
+  <div class="contact-team__inner">
+    <h1 class="contact-team__title title">Contact our sales team</h1>
+    <p class="contact-team__subtitle">Leave a request and we will contact you shortly</p>
+    <form class="contact-team__form">
+      
+      <div class="contact-team__group">
+        <div class="group-field">
+          <h3 class="group-field__title">Your name</h3>
+          <div class="group-field__wrapper">
+              <input class="group-field__input" type="text" placeholder="John Smith" name="name">
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-enter__box">
+        <p class="form-enter__text">Add your mobile number</p>
+        <div class="form-enter__wrapper form-enter__wrapper-phone">
+          <div class="form-group">
+            <div class="dropdown dropdown-flag">
+              <div class="dropdown__button">
+                <img src="images/icons/flag-1.svg" alt="russia-flag">
+              </div>
+            
+              <ul class="dropdown__list">
+                <li class="dropdown__list-item" data-value="russia">
+                  <div class="dropdown__list-item-box">
+                    <img src="images/icons/flad-russia-icon.svg" alt="russia-flag">
+                    <h3>Russia</h3>
+                  </div>
+                  <p>AD +7</p>
+                </li>
+                <li class="dropdown__list-item" data-value="usa">
+                  <div class="dropdown__list-item-box">
+                    <img src="images/icons/flag-1.svg" alt="usa-flag">
+                    <h3>Usa</h3>
+                  </div>
+                  <p>AD +985</p>
+                </li>
+                <li class="dropdown__list-item" data-value="usa">
+                  <div class="dropdown__list-item-box">
+                    <img src="images/icons/flag-2.svg" alt="usa-flag">
+                    <h3>Avstria</h3>
+                  </div>
+                  <p>AD +791</p>
+                </li>
+                <li class="dropdown__list-item" data-value="usa">
+                  <div class="dropdown__list-item-box">
+                    <img src="images/icons/flag-3.svg" alt="usa-flag">
+                    <h3>Canada</h3>
+                  </div>
+                  <p>AD +745</p>
+                </li>
+                <li class="dropdown__list-item" data-value="usa">
+                  <div class="dropdown__list-item-box">
+                    <img src="images/icons/flag-4.svg" alt="usa-flag">
+                    <h3>Strana</h3>
+                  </div>
+                  <p>AD +11</p>
+                </li>
+              </ul>
+              <input class="dropdown__input-hidden" type="text" name="select-category" value="">
+            </div>
+          </div>
+          <input class="form-enter__input input-phone" type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _" value="" name="phone">
+        </div>
+      </div>
+      
+      <div class="contact-team__slider">
+        <div class="range-slider">
+          <div class="range-slider__box">
+            <h5 class="range-slider__title">Candidate invites and opened contacts credits</h5>
+            <div class="range-slider__line"></div>
+          </div>
+          <div class="range-slider__wrapper">
+            <input class="range-slider__input" type="number" value="20" name="range-slider">
+            <p>%</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-team__slider">
+        <div class="range-slider">
+          <div class="range-slider__box">
+            <h5 class="range-slider__title">Users in the system (per company)</h5>
+            <div class="range-slider__line"></div>
+          </div>
+          <div class="range-slider__wrapper">
+            <input class="range-slider__input" type="number" value="20" name="range-slider">
+            <p>%</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-team__group">
+        <div class="group-field">
+          <h3 class="group-field__title">Your message</h3>
+          <div class="group-field__wrapper counter-wrapper">
+            <textarea class="group-field__textarea counter-text" name="" placeholder="Your message" maxlength="1000"></textarea>
+            <p class="create-edit-vacancy__symbols group-field__symbols">
+              <span class="counter-num">0</span>/1000 symbols
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <button class="contact-team__btn save-btn">Send</button>
+      
+      
+    </form>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>
