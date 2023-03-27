@@ -20,6 +20,9 @@
 @import 'pages/policy';
 @import 'pages/persona-account';
 @import 'pages/contact-team';
+@import 'pages/company-details';
+@import 'pages/after-registration-company';
+@import 'pages/choose-plan';
 
 // 
 @import '../../node_modules/nouislider/dist/nouislider';
@@ -487,7 +490,6 @@
 .help-question {
     position: relative;
     margin-left: 10px;
-    z-index: 15;
     &-icon {
         color: #888B8F;
         &:hover {
@@ -508,6 +510,7 @@
         font-size: 14px;
         line-height: 20px;
         pointer-events: none;
+        z-index: 20;
         li {
             list-style: decimal;
         }
@@ -792,7 +795,29 @@
     }
 }
 
-
+.btn-line {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: 8px;
+    border: 1px solid $linkActive;
+    font-weight: 600;
+    &:hover {
+        background-color: $otherBackground;
+        border: 1px solid $linkHover;
+        box-shadow: $smallBoxShadow;
+    }
+    &:disabled {
+        pointer-events: none;
+        cursor: auto;
+        background-color: #F4F7F7;
+        color: $borderGray;
+        border: 1px solid $borderGray;
+    }
+}
 
 
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+@@include('html/header.html', {})
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+
+
+
+<main class="main">
+<section class="company-details">
+<div class="container">
+  <div class="company-details__inner">
+    <h1 class="company-details__title">Company details</h1>
+    <p class="company-details__subtitle">Please provide your company name, description and logo (optionally) to start working with CallPanda service.</p>
+    <form class="company-details__form">
+      
+      <div class="company-details__group">
+        <div class="upload">
+          <p class="upload__title">Logo</p>
+          <div class="upload-wrapper">
+            <div class="upload__img">
+              <!-- Просто раскоментировать изображение и оно станет как нужно -->
+              <!-- <img src="images/content/card/card-photo-2.jpg" alt=""> -->
+            </div>
+            <div class="upload__buttons">
+              <div class="upload-btn">
+                Upload
+                <input class="upload-btn-input upload__input" type="file" name="upload">
+              </div>
+              
+              <button class="delete-btn" disabled>Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="company-details__group">
+        <div class="group-field">
+          <h3 class="group-field__title">Company name *</h3>
+          <div class="group-field__wrapper counter-wrapper">
+              <input class="group-field__input counter-text" type="text" placeholder="placeholder" name="Biffco Enterprises Ltd." maxlength="55">
+              <p class="create-edit-vacancy__symbols group-field__symbols">
+              <span class="counter-num">0</span>/55 symbols
+              </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="company-details__group">
+        <div class="group-field">
+          <h3 class="group-field__title">Company description *</h3>
+          <div class="group-field__wrapper counter-wrapper">
+            <textarea class="group-field__textarea counter-text" name="" placeholder="Describe your Company" maxlength="1000"></textarea>
+            <p class="create-edit-vacancy__symbols group-field__symbols">
+              <span class="counter-num">0</span>/1000 symbols
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="company-details__group">
+        <h3 class="company-details__group-title">Company type</h3>
+        <div class="company-details__box">
+          <div class="company-details__radio">
+            <label class="radio">
+              <input class="radio__real" type="radio" name="company-type" checked>
+              <span class="radio__fake"></span>
+              <span class="create-edit-vacancy__group-checkbox-text radio__title">Direct employer</span>
+            </label>
+          </div>
+          <div class="company-details__radio">
+            <label class="radio">
+              <input class="radio__real" type="radio" name="company-type">
+              <span class="radio__fake"></span>
+              <span class="create-edit-vacancy__group-checkbox-text radio__title">Recruitment agency</span>
+            </label>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="company-details__btn">
+        <button class="save-btn" type="submit">Save and proceed</button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+  })
+  <body>
+
+
+<div class="wrapper">
+
+  <!-- Header -->
+@@include('html/header.html', {})
+<!-- @@include('html/header-business.html', {}) -->
+<!-- @@include('html/header-candidates.html', {}) -->
+<!-- @@include('html/header-guest-white.html', {}) -->
+
+
+
+
+
+<main class="main">
+
+<section class="after-registration-company">
+<div class="container">
+  <div class="after-registration-company__inner">
+    <h1 class="after-registration-company__title title">Congratulations! You are almost done</h1>
+    <p class="after-registration-company__subtitle">Your CallPanda access link has been sent to your email.</p>
+    <p class="after-registration-company__text">You can try the system for free for 7 days.</p>
+    <p class="after-registration-company__text">Your free access to the system includes:</p>
+    <ul class="after-registration-company__list">
+      <li>10 Candidate Invitations</li>
+      <li>1 User in the system</li>
+    </ul>
+    <a class="after-registration-company__link save-btn" href="#">View all plans</a>
+  </div>
+  
+</div>
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+
+      <!-- Footer -->
+      @@include('html/footer.html', {})
+    </div>
+
+
+    <!-- JS -->
+    @@include('html/script.html', {})
+  </body>
+</html>

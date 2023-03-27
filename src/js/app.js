@@ -172,6 +172,7 @@ import counterSymbols from './modules/counterSymbols';
 import rangeSliders from './modules/range-slider';
 import tabs from './modules/tabs';
 import showHidePassword from './modules/showHidePassword';
+import cardPlanShowMore from './modules/cardPlanShowMore';
 
 
 
@@ -186,7 +187,7 @@ try {tabs('.my-profile__tabs', '.my-profile__tabs-btn', '.my-profile__tabs-conte
 
 try {showHidePassword()} catch(e){};
   
-
+try {cardPlanShowMore();} catch(e){};
   
   
 try { counterSymbols(); } catch(e){};
@@ -196,7 +197,6 @@ try { dropDown(); } catch(e){};
 try { formValidator(); } catch(e){};
 
 try { rangeSliders();} catch(e) {};
-
 
 
 
